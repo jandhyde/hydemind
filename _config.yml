@@ -1,0 +1,34 @@
+# HydeMind - Jekyll Configuration
+title: HydeMind
+description: "An Open-Source Approach to Learning RevOps"
+url: "https://hydemind.com"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: none
+
+# Permalink structure
+permalink: /:slug/
+
+# Collections and defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+
+# Plugins (GitHub Pages supported)
+plugins:
+  - jekyll-seo-tag

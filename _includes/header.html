@@ -1,0 +1,28 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a href="{{ '/' | relative_url }}" class="site-logo">
+      <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="HydeMind" width="52" height="52">
+      <span>HydeMind</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span class="hamburger"></span>
+    </button>
+    <nav class="site-nav" id="site-nav">
+      <a href="{{ '/' | relative_url }}" class="nav-link{% if page.url == '/' %} active{% endif %}">Home</a>
+      <div class="nav-dropdown">
+        <button class="nav-link dropdown-toggle" aria-expanded="false">
+          Pillars <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="dropdown-menu">
+          <a href="{{ '/data/' | relative_url }}" class="dropdown-item{% if page.url == '/data/' %} active{% endif %}">Data</a>
+          <a href="{{ '/customer-processes/' | relative_url }}" class="dropdown-item{% if page.url == '/customer-processes/' %} active{% endif %}">Customer Processes</a>
+          <a href="{{ '/kpi-reporting/' | relative_url }}" class="dropdown-item{% if page.url == '/kpi-reporting/' %} active{% endif %}">KPIs &amp; Reporting</a>
+          <a href="{{ '/tech-stack/' | relative_url }}" class="dropdown-item{% if page.url == '/tech-stack/' %} active{% endif %}">Tech Stack</a>
+          <a href="{{ '/enablement/' | relative_url }}" class="dropdown-item{% if page.url == '/enablement/' %} active{% endif %}">Enablement</a>
+          <a href="{{ '/strategic-insights/' | relative_url }}" class="dropdown-item{% if page.url == '/strategic-insights/' %} active{% endif %}">Strategic Insights &amp; Planning</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="header-accent"></div>
+</header>

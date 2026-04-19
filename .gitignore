@@ -1,0 +1,5 @@
+_build/
+_build_tmp/
+build.py
+.DS_Store
+Gemfile.lock
