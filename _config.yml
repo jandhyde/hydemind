@@ -34,6 +34,8 @@ exclude:
   - Gemfile.lock
   - README.md
   - vendor
+  - build.py
+  - _build
 
 # Plugins (GitHub Pages supported)
 plugins:
