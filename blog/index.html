@@ -1,0 +1,106 @@
+---
+layout: default
+title: "Blog"
+description: "AI developments that change how RevOps teams work — tools, integrations, and what they mean for practitioners."
+permalink: /blog/
+---
+<div class="blog-index">
+  <div class="content-container">
+
+    <header class="blog-hero">
+      <h1>Blog</h1>
+      <p class="blog-intro">AI developments that change how RevOps teams work — tools, integrations, and what they mean for practitioners.</p>
+    </header>
+
+    <div id="blog-posts">
+      {% for post in site.posts %}
+      <article class="blog-entry" data-post-index="{{ forloop.index0 }}">
+        <header class="entry-header">
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
+            {{ post.date | date: "%B %-d, %Y" }}
+          </time>
+        </header>
+        <div class="entry-content">
+          {{ post.content }}
+        </div>
+        <hr class="entry-divider">
+      </article>
+      {% endfor %}
+    </div>
+
+    {% if site.posts.size == 0 %}
+    <p class="blog-empty">No posts yet. Check back soon.</p>
+    {% endif %}
+
+    <nav class="blog-pagination" id="blog-pagination" aria-label="Blog pagination">
+      <button class="pagination-btn pagination-prev" id="pagination-prev" aria-label="Newer posts">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13 4l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Newer</span>
+      </button>
+      <span class="pagination-info" id="pagination-info"></span>
+      <button class="pagination-btn pagination-next" id="pagination-next" aria-label="Older posts">
+        <span>Older</span>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </nav>
+
+  </div>
+</div>
+
+<script>
+(function() {
+  var POSTS_PER_PAGE = 10;
+  var posts = document.querySelectorAll('.blog-entry');
+  var totalPosts = posts.length;
+  var totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
+  var currentPage = 1;
+
+  var pagination = document.getElementById('blog-pagination');
+  var prevBtn = document.getElementById('pagination-prev');
+  var nextBtn = document.getElementById('pagination-next');
+  var info = document.getElementById('pagination-info');
+
+  // Hide pagination if 10 or fewer posts
+  if (totalPosts <= POSTS_PER_PAGE) {
+    pagination.style.display = 'none';
+  }
+
+  function showPage(page) {
+    currentPage = page;
+    var start = (page - 1) * POSTS_PER_PAGE;
+    var end = start + POSTS_PER_PAGE;
+
+    for (var i = 0; i < totalPosts; i++) {
+      posts[i].style.display = (i >= start && i < end) ? 'block' : 'none';
+    }
+
+    // Hide the divider on the last visible post
+    for (var i = start; i < end && i < totalPosts; i++) {
+      var divider = posts[i].querySelector('.entry-divider');
+      if (divider) {
+        divider.style.display = (i === Math.min(end, totalPosts) - 1) ? 'none' : 'block';
+      }
+    }
+
+    prevBtn.disabled = (page === 1);
+    nextBtn.disabled = (page === totalPages);
+    info.textContent = 'Page ' + page + ' of ' + totalPages;
+
+    // Scroll to top of blog posts
+    if (page > 1 || totalPages > 1) {
+      document.getElementById('blog-posts').scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  prevBtn.addEventListener('click', function() {
+    if (currentPage > 1) showPage(currentPage - 1);
+  });
+
+  nextBtn.addEventListener('click', function() {
+    if (currentPage < totalPages) showPage(currentPage + 1);
+  });
+
+  showPage(1);
+})();
+</script>
