@@ -441,6 +441,49 @@ hr {
 .shift-card.after h3 { color: #276749; }
 .shift-card p { font-size: 0.95rem; margin-bottom: 0; line-height: 1.7; }
 
+/* Foundation bar (LLMs for RevOps) */
+.foundation-bar {
+  display: block;
+  margin-top: 1.75rem;
+  padding: 1.25rem 1.75rem;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--color-white);
+  transition: box-shadow 0.2s, transform 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.foundation-bar:hover {
+  box-shadow: 0 4px 20px rgba(26, 54, 93, 0.25);
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: var(--color-white);
+}
+.foundation-label {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.15rem 0.6rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+.foundation-title {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.foundation-desc {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
 /* Career section */
 .career-grid {
   display: grid;
