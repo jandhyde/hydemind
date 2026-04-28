@@ -2,7 +2,7 @@
 title: HydeMind
 description: "An Open-Source Approach to Learning RevOps"
 url: "https://hydemind.com"
-baseurl: "/hydemind"
+baseurl: ""
 
 # Build settings
 markdown: kramdown
