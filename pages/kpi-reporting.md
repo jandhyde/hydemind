@@ -92,7 +92,7 @@ Start with the fundamentals, then move to visualization and communication. The g
 |----------|--------|------|------|---------------|
 | [HubSpot Reporting Certification](https://academy.hubspot.com/courses/hubspot-reporting) | HubSpot Academy | Certification | Free | None |
 | [HubSpot Custom Report Builder](https://knowledge.hubspot.com/reports/create-custom-reports) | HubSpot Knowledge Base | Reference | Free | Professional+ |
-| [HubSpot Revenue Analytics](https://knowledge.hubspot.com/reports/analyze-revenue) | HubSpot Knowledge Base | Reference | Free | None |
+| [HubSpot Revenue Analytics](https://knowledge.hubspot.com/reports/track-recurring-revenue-with-revenue-analytics) | HubSpot Knowledge Base | Reference | Free | None |
 
 ### BI Platforms
 
@@ -109,10 +109,10 @@ If you're at a company without a BI platform and making the case, Power BI is th
 | Resource | Source | Type | Cost | Prerequisites |
 |----------|--------|------|------|---------------|
 | [Tableau Free Training](https://www.tableau.com/learn) | Tableau | Self-paced courses | Free | None |
-| [Power BI Guided Learning](https://learn.microsoft.com/en-us/power-bi/guided-learning/) | Microsoft | Learning Path | Free | None |
+| [Power BI Training](https://learn.microsoft.com/en-us/training/powerplatform/power-bi) | Microsoft | Learning Path | Free | None |
 | [Looker Studio (formerly Google Data Studio)](https://skillshop.withgoogle.com/) | Google Skillshop | Course | Free | None |
-| [SQL for Data Analysis](https://mode.com/sql-tutorial/) | Mode Analytics | Tutorial | Free | None |
-| [Power BI for Tableau Users](https://learn.microsoft.com/en-us/training/modules/power-bi-tableau-intro/) | Microsoft | Course | Free | Tableau familiarity |
+| [SQL for Data Analysis](https://www.thoughtspot.com/sql-tutorial) | ThoughtSpot (formerly Mode) | Tutorial | Free | None |
+| [Power BI Training Catalog](https://learn.microsoft.com/en-us/training/browse/?expanded=power-platform&products=power-bi) | Microsoft | Course Catalog | Free | None |
 
 ### Advanced Analytics
 

@@ -87,8 +87,8 @@ Start with forecasting fundamentals, then move into planning frameworks and exec
 | Resource | Source | Type | Cost | Prerequisites |
 |----------|--------|------|------|---------------|
 | [Forecasting Basics](https://trailhead.salesforce.com/content/learn/modules/sales-forecasting) | Salesforce Trailhead | Module | Free | Basic Salesforce |
-| [HubSpot Forecasting Tool](https://knowledge.hubspot.com/forecasting/set-up-forecasting) | HubSpot Knowledge Base | Reference | Free | Sales Hub Professional+ |
-| [Clari Resource Center](https://www.clari.com/resources) | Clari | Guides/Webinars | Free | None |
+| [HubSpot Forecasting Tool](https://knowledge.hubspot.com/forecast/set-up-the-forecast-tool) | HubSpot Knowledge Base | Reference | Free | Sales Hub Professional+ |
+| [Clari Resource Center](https://www.clari.com/resources/downloads/) | Clari | Guides/Webinars | Free | None |
 | [Gong Resource Library](https://www.gong.io/resources/) | Gong | Research/Guides | Free | None |
 
 ### Territory & Capacity Planning
@@ -96,7 +96,7 @@ Start with forecasting fundamentals, then move into planning frameworks and exec
 | Resource | Source | Type | Cost | Prerequisites |
 |----------|--------|------|------|---------------|
 | [Territory Management Basics](https://trailhead.salesforce.com/users/rmitchell61/trailmixes/territory-management) | Salesforce Trailhead | Trailmix | Free | Basic Salesforce |
-| [HubSpot Territory Management](https://knowledge.hubspot.com/sales-content/manage-territories) | HubSpot Knowledge Base | Reference | Free | Enterprise |
+| [HubSpot Territory Assignment](https://blog.hubspot.com/sales/automated-territory-assignment) | HubSpot Blog | Guide | Free | None |
 | [Xactly Resources](https://www.xactlycorp.com/resources) | Xactly | Guides/Research | Free | None |
 
 ### Strategy & Financial Modeling

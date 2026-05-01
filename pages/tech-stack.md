@@ -196,11 +196,11 @@ Start with CRM administration — Salesforce Admin certification is the most val
 
 | Resource | Source | Type | Cost | Prerequisites |
 |----------|--------|------|------|---------------|
-| [HubSpot Sales Software Certification](https://academy.hubspot.com/courses/hubspot-sales-software) | HubSpot Academy | Certification | Free | None |
+| [HubSpot Sales Hub Software Certification](https://academy.hubspot.com/courses/hubspot-sales-hub-software) | HubSpot Academy | Certification | Free | None |
 | [HubSpot CRM Admin Certification](https://academy.hubspot.com/courses/hubspot-admin) | HubSpot Academy | Certification | Free | None |
 | [HubSpot Revenue Operations Certification](https://academy.hubspot.com/courses/revenue-operations) | HubSpot Academy | Certification | Free | None |
 | [HubSpot Reporting Certification](https://academy.hubspot.com/courses/hubspot-reporting) | HubSpot Academy | Certification | Free | None |
-| [HubSpot Workflows (Automation)](https://academy.hubspot.com/courses/workflows) | HubSpot Academy | Course | Free | None |
+| [HubSpot Automation Strategy](https://academy.hubspot.com/courses/automation-strategy) | HubSpot Academy | Course | Free | None |
 | [HubSpot RevOps Bootcamp](https://www.hubspot.com/academy/bootcamps/home) | HubSpot Academy | Instructor-led | Free | HubSpot access |
 | [HubSpot Integrations Marketplace](https://ecosystem.hubspot.com/marketplace/apps) | HubSpot | Reference | Free | None |
 
@@ -210,7 +210,7 @@ Start with CRM administration — Salesforce Admin certification is the most val
 |----------|--------|------|------|---------------|
 | [Flow Basics](https://trailhead.salesforce.com/content/learn/modules/flow-basics) | Salesforce Trailhead | Module | Free | Admin basics |
 | [Build Flows with Flow Builder](https://trailhead.salesforce.com/content/learn/trails/build-flows-with-flow-builder) | Salesforce Trailhead | Trail | Free | Flow Basics |
-| [Zapier Learn](https://zapier.com/learn) | Zapier | Guides | Free | None |
+| [Zapier Learn](https://zapier.com/resources/guides) | Zapier | Guides | Free | None |
 | [Integration Patterns and Practices](https://trailhead.salesforce.com/content/learn/trails/explore-integration-patterns-and-practices) | Salesforce Trailhead | Trail | Free | Admin Intermediate |
 
 ### Tool-Specific Training
@@ -218,7 +218,7 @@ Start with CRM administration — Salesforce Admin certification is the most val
 | Resource | Source | Type | Cost | Prerequisites |
 |----------|--------|------|------|---------------|
 | [Outreach University](https://university.outreach.io/) | Outreach | Certifications | Free | None |
-| [Salesloft Learning](https://learn.salesloft.com/) | Salesloft | Courses | Free | None |
+| [Salesloft Learning](https://academy.salesloft.com) | Salesloft | Courses | Free | None |
 | [Gainsight Education](https://education.gainsight.com/) | Gainsight | Certifications | Free tier | None |
 | [Gong Academy](https://www.gong.io/training-and-education) | Gong | Courses | Free | None |
 

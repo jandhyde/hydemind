@@ -102,7 +102,7 @@ Start with enablement fundamentals, then dive into coaching and content developm
 
 | Resource | Source | Type | Cost | Prerequisites |
 |----------|--------|------|------|---------------|
-| [Onboarding Employees and Customers](https://trailhead.salesforce.com/content/learn/modules/onboarding-employees-and-customers) | Salesforce Trailhead | Module | Free | None |
+| [User Training and Motivation](https://trailhead.salesforce.com/content/learn/modules/user-training-and-motivation/build-your-training-library) | Salesforce Trailhead | Module | Free | None |
 | [ADDIE Model Overview](https://www.instructionaldesign.org/models/addie/) | InstructionalDesign.org | Framework | Free | None |
 | [Google re:Work – Onboarding](https://rework.withgoogle.com/intl/en/guides/learning-development-onboarding) | Google re:Work | Guide | Free | None |
 | [The First 90 Days](https://a.co/d/1vgC5aI) | Michael Watkins | Book | $12 | None |
@@ -112,8 +112,8 @@ Start with enablement fundamentals, then dive into coaching and content developm
 | Resource | Source | Type | Cost | Prerequisites |
 |----------|--------|------|------|---------------|
 | [How to Create a Sales Playbook](https://p.highspot.com/step-by-step-sales-playbooks-guide.html) | Highspot | Guide | Free | None |
-| [HubSpot Playbooks Tool](https://knowledge.hubspot.com/playbooks/create-playbooks) | HubSpot Knowledge Base | Reference | Free | Sales Hub Professional+ |
-| [Klue Competitive Intelligence Resources](https://www.klue.com/resources) | Klue | Guides | Free | None |
+| [HubSpot Playbooks Tool](https://knowledge.hubspot.com/playbooks/use-playbooks) | HubSpot Knowledge Base | Reference | Free | Sales Hub Professional+ |
+| [Klue Competitive Intelligence Resources](https://klue.com/articles) | Klue | Guides | Free | None |
 | [Crayon Competitive Intel Resources](https://www.crayon.co/resources) | Crayon | Guides/Templates | Free | None |
 
 ### Change Management

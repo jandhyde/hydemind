@@ -104,18 +104,18 @@ Start with lifecycle fundamentals, then specialize in either sales process or cu
 | [Lead Qualification with Scoring and Grading](https://trailhead.salesforce.com/content/learn/modules/lead-qualification-with-scoring-and-grading) | Salesforce Trailhead | Module | Free | Lead Management |
 | [Sales Process Mapping Guide](https://www.lucidchart.com/blog/sales-process-mapping) | Lucidchart | Guide | Free | None |
 | [HubSpot Lead Management](https://academy.hubspot.com/courses/lead-management) | HubSpot Academy | Course | Free | None |
-| [Lifecycle Stages in HubSpot](https://knowledge.hubspot.com/contacts/use-lifecycle-stages) | HubSpot Knowledge Base | Reference | Free | None |
+| [Lifecycle Stages in HubSpot](https://knowledge.hubspot.com/records/use-lifecycle-stages) | HubSpot Knowledge Base | Reference | Free | None |
 
 ### Renewal & Expansion
 
 | Resource | Source | Type | Cost | Prerequisites |
 |----------|--------|------|------|---------------|
 | [Gainsight Essentials](https://education.gainsight.com/) | Gainsight | Course | Free tier | None |
-| [ChurnZero Resource Library](https://churnzero.com/resources/) | ChurnZero | Guides/Webinars | Free | None |
-| [HubSpot Service Hub Certification](https://academy.hubspot.com/courses/hubspot-service-hub-software) | HubSpot Academy | Certification | Free | None |
+| [ChurnZero Resource Library](https://churnzero.com/customer-success-resources/) | ChurnZero | Guides/Webinars | Free | None |
+| [HubSpot Service Hub Certification](https://academy.hubspot.com/courses/hubspot-service-software) | HubSpot Academy | Certification | Free | None |
 | [CustomerSuccessU Certifications](https://courses.customersuccessu.org/) | CustomerSuccessU | Courses | Free | None |
 | [Customer Health Score Guide](https://www.gainsight.com/guides/customer-health-score/) | Gainsight | Guide | Free | None |
-| [Designing a QBR Program](https://churnzero.com/blog/quarterly-business-review-template/) | ChurnZero | Guide/Template | Free | None |
+| [Designing a QBR Program](https://churnzero.com/blog/quarterly-business-reviews/) | ChurnZero | Guide/Template | Free | None |
 | [Digital Customer Success Playbook](https://www.gainsight.com/guides/digital-customer-success/) | Gainsight | Guide | Free | None |
 
 ### Frameworks & Methodologies
@@ -125,8 +125,8 @@ Start with lifecycle fundamentals, then specialize in either sales process or cu
 | [What is BANT? A Complete Guide](https://blog.hubspot.com/sales/bant) | HubSpot | Guide | Free | None |
 | [BANT Qualification Framework](https://www.salesforce.com/blog/what-is-bant-lead-generation/) | Salesforce | Blog | Free | None |
 | [MEDDPICC Masterclass](https://www.youtube.com/watch?v=WkDJ3Yw6Zxc) | Darius Lahoutifard | Course | $499 | None |
-| [SPICED Sales Methodology](https://www.winningbydesign.com/spiced/) | Winning by Design | Framework | Free overview | None |
-| [Revenue Architecture Course](https://winningbydesign.com/revenue-academy/course-revenue-architecture/) | Winning by Design | Course | ~$1500+ | None |
+| [SPICED Sales Methodology](https://winningbydesign.com/spiced-framework/) | Winning by Design | Framework | Free overview | None |
+| [Revenue Architecture Course](https://winningbydesign.com/training-coaching/revenue-architecture/) | Winning by Design | Course | ~$1500+ | None |
 | [Intercom on Jobs-to-be-Done](https://www.intercom.com/resources/books/intercom-jobs-to-be-done) | Intercom | Book (free PDF) | Free | None |
 | [Jobs to be Done Framework Explained](https://www.youtube.com/watch?v=sfGtw2C95Ms) | Harvard Business Review | Video | Free | None |
 

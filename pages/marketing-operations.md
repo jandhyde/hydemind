@@ -138,8 +138,8 @@ From the [15 Core KPIs](/):
 
 | Resource | Source | Type | Cost | Prerequisites |
 |----------|--------|------|------|--------------|
-| [Lead Management in Salesforce](https://trailhead.salesforce.com/content/learn/modules/lead-management) | Salesforce Trailhead | Interactive Module | Free | None |
-| [Leads & Opportunities in HubSpot](https://academy.hubspot.com/courses/understanding-leads-and-opportunities) | HubSpot Academy | Course | Free | None |
+| [Leads and Opportunities for Lightning Experience](https://trailhead.salesforce.com/content/learn/modules/leads_opportunities_lightning_experience) | Salesforce Trailhead | Interactive Module | Free | None |
+| [HubSpot Lead Management](https://academy.hubspot.com/courses/lead-management) | HubSpot Academy | Course | Free | None |
 | [MQL vs SQL: The B2B Lead Qualification Guide](https://martal.ca/mql-vs-sql-lb/) | Martal Group | Guide | Free | None |
 | [MQL to SQL: Best Practices for a Smooth Lead Handoff](https://www.b2bappointmentsetting.com/blog/mql-to-sql-best-practices-for-a-smooth-lead-handoff/) | B2B Appointment Setting | Guide | Free | None |
 
@@ -156,9 +156,9 @@ From the [15 Core KPIs](/):
 
 | Resource | Source | Type | Cost | Prerequisites |
 |----------|--------|------|------|--------------|
-| [HubSpot Marketing Software Certification](https://academy.hubspot.com/courses/hubspot-marketing-software) | HubSpot Academy | Certification | Free | None |
+| [HubSpot Marketing Hub Software Certification](https://academy.hubspot.com/courses/hubspot-marketing-hub-software) | HubSpot Academy | Certification | Free | None |
 | [HubSpot Revenue Operations Certification](https://academy.hubspot.com/courses/revenue-operations) | HubSpot Academy | Certification | Free | None |
-| [Pardot (Marketing Cloud Account Engagement) Trailhead](https://trailhead.salesforce.com/content/learn/trails/pardot) | Salesforce Trailhead | Interactive Trail | Free | None |
+| [Marketing Cloud Account Engagement Training](https://trailhead.salesforce.com/users/esanche/trailmixes/marketing-cloud-account-engagement-training) | Salesforce Trailhead | Trailmix | Free | None |
 | [Marketo Engage Digital Marketer Learning Path](https://learning.adobe.com/learning-path/marketo-digital-marketer.html) | Adobe | Learning Path | Free | None |
 
 ### Marketing-Sales Alignment
@@ -167,7 +167,7 @@ From the [15 Core KPIs](/):
 |----------|--------|------|------|--------------|
 | [How to Improve the MQL to SQL Process](https://www.unboundb2b.com/blog/how-to-improve-the-mql-to-sql-process-in-2026/) | UnboundB2B | Guide | Free | None |
 | [Smarketing: How to Align Sales & Marketing](https://academy.hubspot.com/courses/inbound-sales) | HubSpot Academy | Course | Free | None |
-| [ABM Certification](https://academy.demandbase.com/) | Demandbase | Certification | Free | None |
+| [ABM Certification](https://www.demandbase.com/resources/abm-certification/) | Demandbase | Certification | Free | None |
 
 ### Funnel Metrics & Measurement
 

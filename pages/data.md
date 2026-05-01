@@ -89,15 +89,15 @@ Start with CRM fundamentals, then move to data quality and enrichment concepts.
 
 | Resource | Source | Type | Cost | Prerequisites |
 |----------|--------|------|------|---------------|
-| [HubSpot Data Quality Tools](https://academy.hubspot.com/courses/data-quality) | HubSpot Academy | Course | Free | None |
-| [HubSpot Data Management](https://knowledge.hubspot.com/properties/manage-your-properties) | HubSpot Knowledge Base | Reference | Free | None |
-| [Import & Clean Data in HubSpot](https://academy.hubspot.com/courses/importing-data) | HubSpot Academy | Course | Free | None |
+| [CRM Data Migration Certification](https://academy.hubspot.com/courses/CRM-Data-Migration-Certification) | HubSpot Academy | Certification | Free | None |
+| [Create and Edit Properties in HubSpot](https://knowledge.hubspot.com/properties/create-and-edit-properties) | HubSpot Knowledge Base | Reference | Free | None |
+| [HubSpot Lead Management](https://academy.hubspot.com/courses/lead-management) | HubSpot Academy | Course | Free | None |
 
 ### Data Enrichment & Tools
 
 | Resource | Source | Type | Cost | Prerequisites |
 |----------|--------|------|------|---------------|
-| [Clay University](https://www.clay.com/university) | Clay | Course | Free | None |
+| [Clay University](https://university.clay.com/) | Clay | Course | Free | None |
 | [ZoomInfo University](https://university.zoominfo.com/) | ZoomInfo | Resources | Free | None |
 
 ### Advanced / Architecture
@@ -106,7 +106,7 @@ Start with CRM fundamentals, then move to data quality and enrichment concepts.
 |----------|--------|------|------|---------------|
 | [Data Integration Specialist Superbadge Prep](https://trailhead.salesforce.com/users/rfrazer/trailmixes/prep-for-data-integration-specialist-superbadge) | Salesforce Trailhead | Trailmix | Free | Intermediate Salesforce |
 | [Integration Patterns and Practices](https://trailhead.salesforce.com/content/learn/trails/explore-integration-patterns-and-practices) | Salesforce Trailhead | Trail | Free | Data Modeling |
-| [DAMA Data Management Body of Knowledge (DAMA-DMBOK)](https://www.dama.org/cpages/body-of-knowledge) | DAMA International | Framework | $79 | None |
+| [DAMA Data Management Body of Knowledge (DAMA-DMBOK)](https://dama.org/learning-resources/dama-data-management-body-of-knowledge-dmbok/) | DAMA International | Framework | $79 | None |
 
 ### Videos & Talks
 
