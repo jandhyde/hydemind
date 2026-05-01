@@ -196,9 +196,13 @@ Start with CRM administration — Salesforce Admin certification is the most val
 
 | Resource | Source | Type | Cost | Prerequisites |
 |----------|--------|------|------|---------------|
-| [HubSpot Sales Software](https://academy.hubspot.com/courses/hubspot-sales-software) | HubSpot Academy | Certification | Free | None |
-| [Revenue Operations](https://academy.hubspot.com/courses/revenue-operations) | HubSpot Academy | Certification | Free | None |
-| [HubSpot Reporting](https://academy.hubspot.com/courses/hubspot-reporting) | HubSpot Academy | Certification | Free | None |
+| [HubSpot Sales Software Certification](https://academy.hubspot.com/courses/hubspot-sales-software) | HubSpot Academy | Certification | Free | None |
+| [HubSpot CRM Admin Certification](https://academy.hubspot.com/courses/hubspot-admin) | HubSpot Academy | Certification | Free | None |
+| [HubSpot Revenue Operations Certification](https://academy.hubspot.com/courses/revenue-operations) | HubSpot Academy | Certification | Free | None |
+| [HubSpot Reporting Certification](https://academy.hubspot.com/courses/hubspot-reporting) | HubSpot Academy | Certification | Free | None |
+| [HubSpot Workflows (Automation)](https://academy.hubspot.com/courses/workflows) | HubSpot Academy | Course | Free | None |
+| [HubSpot RevOps Bootcamp](https://www.hubspot.com/academy/bootcamps/home) | HubSpot Academy | Instructor-led | Free | HubSpot access |
+| [HubSpot Integrations Marketplace](https://ecosystem.hubspot.com/marketplace/apps) | HubSpot | Reference | Free | None |
 
 ### Automation & Integration
 
@@ -241,6 +245,9 @@ You've mastered this pillar when you can confidently do the following:
 - Configure user permissions and security settings appropriately
 - Build reports and dashboards that answer business questions
 - Obtain Salesforce Administrator certification (or equivalent for your CRM)
+- (HubSpot) Complete HubSpot CRM Admin Certification
+- (HubSpot) Configure deal pipelines, lifecycle stages, and lead statuses
+- (HubSpot) Build custom objects and properties for your business model
 
 ### Automation
 
@@ -249,6 +256,9 @@ You've mastered this pillar when you can confidently do the following:
 - Design automated lead routing based on territory or round-robin rules
 - Build task/activity automation that ensures follow-up doesn't fall through cracks
 - Document automation logic so others can maintain it
+- (HubSpot) Build a lead rotation workflow using HubSpot Workflows
+- (HubSpot) Create a lifecycle stage progression automation
+- (HubSpot) Set up automated deal stage tasks and notifications
 
 ### Integration
 

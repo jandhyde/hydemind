@@ -86,6 +86,34 @@ Start with the fundamentals, then move to visualization and communication. The g
 | [Storytelling with Data Podcast](https://www.storytellingwithdata.com/podcast) | Cole Nussbaumer Knaflic | Podcast | Free | None |
 | [Data Visualization Best Practices](https://trailhead.salesforce.com/content/learn/modules/communication-with-charts/apply-visualization-attributes-and-principles) | Salesforce Trailhead | Module | Free | None |
 
+### HubSpot Reporting
+
+| Resource | Source | Type | Cost | Prerequisites |
+|----------|--------|------|------|---------------|
+| [HubSpot Reporting Certification](https://academy.hubspot.com/courses/hubspot-reporting) | HubSpot Academy | Certification | Free | None |
+| [HubSpot Custom Report Builder](https://knowledge.hubspot.com/reports/create-custom-reports) | HubSpot Knowledge Base | Reference | Free | Professional+ |
+| [HubSpot Revenue Analytics](https://knowledge.hubspot.com/reports/analyze-revenue) | HubSpot Knowledge Base | Reference | Free | None |
+
+### BI Platforms
+
+CRM-native reporting hits a ceiling. When a company reaches ~50 employees or $5M+ ARR, someone starts asking for Tableau, Looker, or Power BI. BI platform fluency is a Practitioner→Strategist transition skill.
+
+| Platform | Best For | Cost Model |
+|----------|---------|-----------|
+| **Tableau** | Visual exploration, complex analyses, embedded analytics | Per-user licensing ($35-$70/user/month) |
+| **Looker** | Governed metrics, self-service analytics, consistent definitions | Per-user (part of Google Cloud) |
+| **Power BI** | Microsoft shops, cost-sensitive orgs, Excel-familiar teams | Free (Desktop) to $10-$20/user/month |
+
+If you're at a company without a BI platform and making the case, Power BI is the easiest sell. If you're joining a team that already has Tableau or Looker, learn that tool. Don't waste time learning all three — learn one deeply.
+
+| Resource | Source | Type | Cost | Prerequisites |
+|----------|--------|------|------|---------------|
+| [Tableau Free Training](https://www.tableau.com/learn) | Tableau | Self-paced courses | Free | None |
+| [Power BI Guided Learning](https://learn.microsoft.com/en-us/power-bi/guided-learning/) | Microsoft | Learning Path | Free | None |
+| [Looker Studio (formerly Google Data Studio)](https://skillshop.withgoogle.com/) | Google Skillshop | Course | Free | None |
+| [SQL for Data Analysis](https://mode.com/sql-tutorial/) | Mode Analytics | Tutorial | Free | None |
+| [Power BI for Tableau Users](https://learn.microsoft.com/en-us/training/modules/power-bi-tableau-intro/) | Microsoft | Course | Free | Tableau familiarity |
+
 ### Advanced Analytics
 
 | Resource | Source | Type | Cost | Prerequisites |
@@ -129,6 +157,25 @@ You've mastered this pillar when you can confidently do the following:
 - Build a customer health dashboard that surfaces at-risk accounts
 - Create an executive summary that tells a story, not just displays data
 - Design reports that drive action, not just inform
+- (HubSpot) Build a sales performance dashboard using HubSpot's custom report builder
+- (HubSpot) Create a pipeline waterfall report showing stage movement
+- (HubSpot) Set up attribution reporting (requires Marketing Hub Professional+)
+
+### BI Foundations
+
+- Understand the difference between CRM-native reporting and BI platform reporting — when do you need each?
+- Connect a BI tool to at least one data source (CRM export, database, or API)
+- Build a dashboard in a BI tool that you couldn't build in your CRM alone (multi-source data)
+- Learn basic SQL (SELECT, WHERE, JOIN, GROUP BY) — this unlocks every BI platform
+
+### Platform Proficiency (pick your org's tool)
+
+- (Tableau) Complete Tableau Creator free training path
+- (Tableau) Build a sales pipeline dashboard with drill-down capability
+- (Power BI) Complete Microsoft Power BI Guided Learning
+- (Power BI) Build a revenue waterfall using DAX calculations
+- (Looker) Understand LookML basics — how the semantic layer defines metrics
+- (Looker Studio) Build a marketing performance dashboard with blended data sources
 
 ### Advanced
 
@@ -136,6 +183,9 @@ You've mastered this pillar when you can confidently do the following:
 - Calculate and track forecast accuracy by rep, segment, and time period
 - Build unit economics model (CAC, LTV, LTV:CAC ratio, payback period)
 - Identify leading indicators that predict churn 90+ days in advance
+- Build an executive dashboard that combines CRM, billing, and product usage data
+- Design a self-service analytics environment where sales managers can explore their own data
+- Create a data governance process for dashboard definitions (who owns "revenue"?)
 
 ### Communication
 
@@ -159,6 +209,14 @@ Use Salesforce Developer Edition (free) and import sample data. Build the dashbo
 
 Study public company earnings reports. They're masterclasses in how to present revenue metrics to stakeholders. Notice how they frame growth, how they explain misses, how they set expectations.
 
+### If your company has a BI platform
+
+Build something leadership actually uses. Not a practice dashboard — a real one. Start with the executive dashboard: pipeline summary, bookings vs. target, churn indicators, forecast vs. actual. Make it good enough that someone checks it daily.
+
+### If your company doesn't have a BI platform
+
+Download Power BI Desktop (free) or use Looker Studio (free). Export your CRM data and build a dashboard that combines it with another data source (even a spreadsheet of targets or budget data). The skill is combining data sources and telling a visual story — you can demonstrate that with free tools and export data.
+
 ### Portfolio Pieces to Build
 
 - A revenue waterfall showing the components of ARR change
@@ -166,4 +224,6 @@ Study public company earnings reports. They're masterclasses in how to present r
 - A forecast accuracy analysis showing historical patterns
 - An executive summary deck that tells a story with data
 - A cohort analysis showing retention trends over time
+- Executive revenue dashboard (multi-source) with drill-down capability in a BI tool
+- Self-service analytics guide for business users (documentation of what you built and how others can use it)
 {: .rationale-covers}

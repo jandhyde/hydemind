@@ -85,6 +85,14 @@ Start with CRM fundamentals, then move to data quality and enrichment concepts.
 | [Data Management](https://trailhead.salesforce.com/content/learn/modules/lex_implementation_data_management) | Salesforce Trailhead | Module | Free | Basic Salesforce |
 | [Duplicate Management](https://trailhead.salesforce.com/content/learn/modules/sales_admin_duplicate_management) | Salesforce Trailhead | Module | Free | Basic Salesforce |
 
+### Data Quality & Management (HubSpot)
+
+| Resource | Source | Type | Cost | Prerequisites |
+|----------|--------|------|------|---------------|
+| [HubSpot Data Quality Tools](https://academy.hubspot.com/courses/data-quality) | HubSpot Academy | Course | Free | None |
+| [HubSpot Data Management](https://knowledge.hubspot.com/properties/manage-your-properties) | HubSpot Knowledge Base | Reference | Free | None |
+| [Import & Clean Data in HubSpot](https://academy.hubspot.com/courses/importing-data) | HubSpot Academy | Course | Free | None |
+
 ### Data Enrichment & Tools
 
 | Resource | Source | Type | Cost | Prerequisites |
@@ -128,6 +136,8 @@ You've mastered this pillar when you can confidently do the following:
 - Calculate a data completeness score for key objects (Accounts, Contacts, Opportunities)
 - Identify the top 5 data quality issues impacting reporting accuracy
 - Build a duplicate detection and merge process
+- (HubSpot) Audit property hygiene — identify unused, duplicate, and inconsistently-used properties
+- (HubSpot) Set up data quality automation using Operations Hub (formatting, deduplication)
 
 ### Data Infrastructure
 

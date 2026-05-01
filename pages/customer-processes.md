@@ -51,6 +51,12 @@ These are the building blocks for designing customer-facing workflows that scale
 | **Qualification Frameworks** | Criteria for determining if an opportunity is real (BANT, MEDDIC, SPICED) | Prevents wasted effort on deals that won't close |
 | **Segmentation** | Grouping customers by shared attributes (size, industry, behavior, value) | Different segments need different processes |
 | **Ideal Customer Profile (ICP)** | Definition of the customer most likely to buy and succeed | Focuses resources on highest-probability targets |
+| **Customer Health Score** | Composite score combining product usage, engagement, support sentiment, and contract signals to predict retention risk | RevOps builds the model, defines the inputs, and operationalizes the alerts. CS uses it daily. |
+| **Digital CS / Tech-Touch** | Automated, scaled customer engagement for segments that don't warrant a dedicated CSM (typically SMB/low-ACV) | RevOps designs the automation, triggers, and measurement. This is where CS meets operations at scale. |
+| **Escalation Framework** | Defined process for identifying, routing, and resolving at-risk accounts through structured intervention tiers | Without a framework, escalations are ad hoc and inconsistent. RevOps defines the rules and builds the tracking. |
+| **Time to Value (TTV)** | Time from contract close to the customer achieving their first meaningful outcome | Leading indicator of retention. RevOps tracks it; CS and onboarding influence it. |
+| **GRR vs NRR** | Gross Revenue Retention (retention without expansion) vs Net Revenue Retention (retention + expansion) | GRR shows the health of the base. NRR shows the health of the business model. RevOps reports both; CS influences both. |
+| **Customer Segmentation for CS** | Dividing the customer base into segments that receive different levels of service (high-touch, mid-touch, tech-touch) | Segmentation determines resourcing, automation strategy, and coverage model. RevOps defines the model; CS leadership implements it. |
 | **Health Scoring** | Quantifying customer risk/opportunity based on engagement signals | Enables proactive intervention before churn |
 | **QBR (Quarterly Business Review)** | Structured meeting to review value delivered and plan ahead | Drives retention, surfaces expansion opportunities |
 | **Renewal Playbook** | Standardized process for securing renewals before contract end | Predictability, earlier risk identification |
@@ -97,6 +103,8 @@ Start with lifecycle fundamentals, then specialize in either sales process or cu
 | [Lead Management](https://trailhead.salesforce.com/users/rhibbert/trailmixes/lead-management) | Salesforce Trailhead | Module | Free | Basic Salesforce |
 | [Lead Qualification with Scoring and Grading](https://trailhead.salesforce.com/content/learn/modules/lead-qualification-with-scoring-and-grading) | Salesforce Trailhead | Module | Free | Lead Management |
 | [Sales Process Mapping Guide](https://www.lucidchart.com/blog/sales-process-mapping) | Lucidchart | Guide | Free | None |
+| [HubSpot Lead Management](https://academy.hubspot.com/courses/lead-management) | HubSpot Academy | Course | Free | None |
+| [Lifecycle Stages in HubSpot](https://knowledge.hubspot.com/contacts/use-lifecycle-stages) | HubSpot Knowledge Base | Reference | Free | None |
 
 ### Renewal & Expansion
 
@@ -104,6 +112,11 @@ Start with lifecycle fundamentals, then specialize in either sales process or cu
 |----------|--------|------|------|---------------|
 | [Gainsight Essentials](https://education.gainsight.com/) | Gainsight | Course | Free tier | None |
 | [ChurnZero Resource Library](https://churnzero.com/resources/) | ChurnZero | Guides/Webinars | Free | None |
+| [HubSpot Service Hub Certification](https://academy.hubspot.com/courses/hubspot-service-hub-software) | HubSpot Academy | Certification | Free | None |
+| [CustomerSuccessU Certifications](https://courses.customersuccessu.org/) | CustomerSuccessU | Courses | Free | None |
+| [Customer Health Score Guide](https://www.gainsight.com/guides/customer-health-score/) | Gainsight | Guide | Free | None |
+| [Designing a QBR Program](https://churnzero.com/blog/quarterly-business-review-template/) | ChurnZero | Guide/Template | Free | None |
+| [Digital Customer Success Playbook](https://www.gainsight.com/guides/digital-customer-success/) | Gainsight | Guide | Free | None |
 
 ### Frameworks & Methodologies
 
@@ -140,6 +153,8 @@ You've mastered this pillar when you can confidently do the following:
 - Identify the key handoff points between teams (Marketing → Sales → CS)
 - Document what "success" looks like at each stage from the customer's perspective
 - Pinpoint where customers most commonly drop off or get stuck
+- (HubSpot) Map lifecycle stages to your customer journey (Subscriber → Lead → MQL → SQL → Opportunity → Customer → Evangelist)
+- (HubSpot) Configure deal pipeline stages to match your sales process
 
 ### Sales Process
 
@@ -161,6 +176,8 @@ You've mastered this pillar when you can confidently do the following:
 - Define early warning signals that predict churn risk
 - Create a renewal playbook that any team member can execute
 - Achieve 90%+ "on-time renewal" rate (no scrambling in the final week)
+- (HubSpot) Set up renewal tracking using deal pipelines or custom objects
+- (HubSpot) Build automated renewal reminders using workflows
 
 ### Expansion Process
 
@@ -175,6 +192,39 @@ You've mastered this pillar when you can confidently do the following:
 - Establish consistent QBR cadence based on customer segment/value
 - Track QBR completion rate and correlate with retention outcomes
 - Build an executive sponsor engagement program for strategic accounts
+
+### Customer Health Scoring
+
+- Define 4-6 health score inputs (product usage, support tickets, engagement, NPS, contract signals)
+- Weight each input based on correlation to actual churn/renewal outcomes
+- Build health score in CRM or CS platform
+- Validate health score against 6+ months of actual renewal outcomes
+- Create automated alerts for health score drops (define thresholds)
+- Build a health trend dashboard — score over time, not just current snapshot
+
+### QBR Program Design
+
+- Design a QBR template that tells a value story (not a feature usage report)
+- Define QBR cadence by segment (quarterly for enterprise, semi-annual for mid-market)
+- Build the QBR data package automation (pull metrics, format, deliver to CSM)
+- Track QBR completion rate and correlation to renewal outcomes
+- Create executive-facing QBR for strategic accounts (different from standard)
+
+### Digital CS / Tech-Touch
+
+- Define which customer segments receive tech-touch vs. human-touch
+- Design automated onboarding journey for tech-touch segments
+- Build usage-based trigger campaigns (low usage alerts, feature adoption nudges)
+- Create self-service resource center or knowledge base
+- Measure engagement rates on tech-touch programs vs. human-touch outcomes
+
+### Escalation Framework
+
+- Define escalation tiers (CSM → CS Manager → CS Director → Executive Sponsor)
+- Create escalation criteria (health score thresholds, missed meetings, support escalations, usage drops)
+- Build escalation tracking in CRM (custom object or case type)
+- Define response time SLAs for each escalation tier
+- Create save playbooks for common escalation scenarios
 
 ### Process Documentation
 
@@ -196,6 +246,14 @@ Audit your last 10 churned customers — at what point could intervention have s
 
 Use Salesforce Developer Edition to build a sample opportunity pipeline with stages. Create a renewal playbook template in a doc — what would you do at 180/90/60/30 days? Design a customer segmentation framework for a hypothetical SaaS company. Build a QBR deck template that you could use with any customer.
 
+### If you have CS platform access (Gainsight, ChurnZero, Totango)
+
+Build a health scoring model using real data. Start with 4 inputs, weight them based on intuition, then validate against actual renewal outcomes over 2+ quarters. Iterate. Present the model and its predictive accuracy to CS leadership. This is a career-defining portfolio piece.
+
+### If you don't have CS platform access
+
+Build the health scoring model in a spreadsheet. Use whatever data you can access (CRM activity, support tickets, billing data). The model design and validation logic are the same regardless of the tool. Document your methodology and present it as a proposal.
+
 ### Portfolio Pieces to Build
 
 - A renewal playbook with timeline and activities
@@ -203,4 +261,7 @@ Use Salesforce Developer Edition to build a sample opportunity pipeline with sta
 - A customer segmentation framework with criteria and differentiated approaches
 - A customer journey map showing touchpoints and handoffs
 - A stage conversion analysis with recommendations
+- Customer health scoring model with validation methodology
+- Digital CS program design document (segmentation, triggers, content, measurement)
+- Escalation framework with SLAs and tracking design
 {: .rationale-covers}

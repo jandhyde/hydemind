@@ -112,6 +112,7 @@ Start with enablement fundamentals, then dive into coaching and content developm
 | Resource | Source | Type | Cost | Prerequisites |
 |----------|--------|------|------|---------------|
 | [How to Create a Sales Playbook](https://p.highspot.com/step-by-step-sales-playbooks-guide.html) | Highspot | Guide | Free | None |
+| [HubSpot Playbooks Tool](https://knowledge.hubspot.com/playbooks/create-playbooks) | HubSpot Knowledge Base | Reference | Free | Sales Hub Professional+ |
 | [Klue Competitive Intelligence Resources](https://www.klue.com/resources) | Klue | Guides | Free | None |
 | [Crayon Competitive Intel Resources](https://www.crayon.co/resources) | Crayon | Guides/Templates | Free | None |
 
