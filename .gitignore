@@ -1,5 +1,6 @@
 _build/
 _build_tmp/
+__pycache__/
 build.py
 .DS_Store
 Gemfile.lock
