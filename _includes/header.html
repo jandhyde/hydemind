@@ -9,7 +9,6 @@
     </button>
     <nav class="site-nav" id="site-nav">
       <a href="{{ '/' | relative_url }}" class="nav-link{% if page.url == '/' %} active{% endif %}">Home</a>
-      <a href="{{ '/blog/' | relative_url }}" class="nav-link{% if page.url contains '/blog' %} active{% endif %}">Blog</a>
       <a href="{{ '/llms-for-revops/' | relative_url }}" class="nav-link{% if page.url == '/llms-for-revops/' %} active{% endif %}">LLMs for RevOps</a>
       <a href="{{ '/learning-path/' | relative_url }}" class="nav-link{% if page.url == '/learning-path/' %} active{% endif %}">Learning Path</a>
       <div class="nav-dropdown">
