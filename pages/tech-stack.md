@@ -160,9 +160,9 @@ Connects systems, moves data, and automates workflows across tools.
 
 ### CPQ (Configure, Price, Quote)
 
-Manages complex pricing, generates quotes, and enforces deal desk rules.
+Manages complex pricing, generates quotes, and enforces deal desk rules. For the process these tools automate — catalog, price rules, approvals, billing, amendments — see [Quote-to-Cash & CPQ](/customer-processes/#key-concepts) in Customer Processes.
 
-**Examples:** Salesforce CPQ, DealHub, PandaDoc, Proposify
+**Examples:** Salesforce Revenue Cloud (successor to Salesforce CPQ, which went End of Sale in March 2025), DealHub, PandaDoc, Proposify. Billing/subscription side: Zuora, Chargebee, Stripe Billing.
 {: .tool-examples}
 
 </div>

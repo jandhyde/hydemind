@@ -32,6 +32,7 @@ Every customer interaction follows a process, whether you've designed it or not.
 - **Customer Journey** — Mapping the full lifecycle from prospect to advocate
 - **Sales Process** — Stage definitions, qualification criteria, handoffs
 - **Segmentation** — Grouping customers by attributes that predict behavior
+- **Quote-to-Cash** — Turning a closed deal into an order, an invoice, and collected cash
 - **QBRs** — Structured business reviews that drive retention and expansion
 - **Renewal** — Proactive processes that prevent churn before it happens
 - **Expansion** — Systematic identification and pursuit of upsell/cross-sell
@@ -62,6 +63,34 @@ These are the building blocks for designing customer-facing workflows that scale
 | **Renewal Playbook** | Standardized process for securing renewals before contract end | Predictability, earlier risk identification |
 | **Expansion Playbook** | Process for identifying and closing upsell/cross-sell | Grows revenue without acquisition cost |
 
+### Quote-to-Cash & CPQ
+
+Between "we won the deal" and "we keep the account" sits the workflow that turns a yes into an order, an invoice, and collected cash. It's the seam where CRM meets finance, and it's the single biggest source of *invisible* revenue leakage. RevOps almost always owns it in practice.
+
+The whole point is seeing it as one connected motion rather than the slice you happen to touch:
+
+**Configure → Price → Quote → Approve → Order → Bill → Collect → Renew / Amend**
+
+CPQ is the front three steps. Order-to-Cash is everything from Order onward. Lead-to-Cash wraps the whole thing back to marketing. Knowing where those boundaries sit keeps project scope and vendor conversations honest.
+
+| Concept | What It Means | Why It Matters |
+|---------|---------------|----------------|
+| **Quote-to-Cash (Q2C)** | The end-to-end workflow from configuring a deal to collecting cash | The operational backbone connecting CRM to finance/ERP. RevOps owns the handoffs, cross-system data integrity, and the leakage points between them. |
+| **CPQ (Configure, Price, Quote)** | Software that lets reps assemble valid configurations, apply correct pricing, and generate accurate quotes without spreadsheets | RevOps configures the rules, maintains the catalog, and is accountable for quote accuracy and speed. Bad CPQ means slow deals and pricing errors. |
+| **Product Catalog & Price Book** | The structured list of sellable products/SKUs and their prices by currency, region, and segment | The foundation everything in Q2C runs on. A messy catalog breaks quoting, reporting, and billing downstream. RevOps owns the hygiene. |
+| **Bundles & Product Rules** | Logic for what can be sold together — dependencies, exclusions, auto-added components | Encodes "what's sellable" so reps can't build invalid or unprofitable configurations. RevOps writes and maintains the rules. |
+| **Discounting & Price Rules** | Structured discount tiers, floors, and logic that adjusts price by volume, term, or segment | Where margin is won or lost. RevOps sets the guardrails so discounting is governed, not improvised. |
+| **Deal Desk** | Cross-functional group (sales, RevOps, finance, legal) that reviews and structures non-standard, high-value, or complex deals | RevOps usually runs the deal desk operationally — the queue, the SLAs, the data. It's where pricing policy meets the messy real deal. |
+| **Approval Workflows** | Automated routing that sends a quote to the right approvers based on discount, margin, term, or product thresholds | Turns governance from "email the VP" into an enforced, auditable, fast process. RevOps designs the matrix and builds the automation. |
+| **Order Management** | Capturing the agreed order and handing it cleanly to provisioning and billing | The bridge between closed-won and actually-delivered-and-billed. Errors here cause leakage and customer friction. |
+| **Billing & Invoicing** | Generating invoices on the right schedule (subscription, usage, milestone) and collecting payment | The "to-Cash" half. RevOps may not own billing ops, but owns the CRM-to-billing data flow and the metric definitions that depend on it. |
+| **Subscription Management** | Managing recurring contracts over their life: upgrades, add-ons, proration, co-terming | Where MRR/ARR actually lives and changes. RevOps defines how changes are modeled so reporting stays accurate. |
+| **Amendments & Proration** | Mid-term changes (add seats, upgrade tier) and the math that charges fairly for the partial period | A top source of billing disputes and ARR miscalculation. RevOps defines the rules so mid-term changes don't corrupt the numbers. |
+| **Co-terming** | Aligning multiple subscriptions and add-ons to a single end date | Prevents the "five renewal dates per account" mess and simplifies renewals. A practical lever RevOps controls. |
+| **Revenue Leakage** | Revenue lost to unapproved discounts, un-billed usage, missed renewals, or quote/order/invoice mismatches | The reason Q2C governance exists. Most leakage is invisible until someone instruments the process — that someone is RevOps. |
+
+> **A note on Salesforce CPQ:** Salesforce put its legacy CPQ (the SteelBrick-based managed package) into End of Sale on March 19, 2025 — no new licenses for net-new customers. Existing customers keep it, can renew and add seats, and Salesforce has not announced an end-of-support date. New implementations are steered to **Revenue Cloud Advanced**. For learners: the Trailhead CPQ modules remain the best free way to learn the *concepts* — configuration, price rules, approvals — and those concepts transfer directly. Just know the go-forward Salesforce product is Revenue Cloud. Learn the patterns, not the buttons.
+
 ### Related KPIs
 
 <div class="kpi-box" markdown="1">
@@ -80,6 +109,8 @@ These are the building blocks for designing customer-facing workflows that scale
 - **Health Score Accuracy** — does your score actually predict outcomes?
 - **On-Time Renewal Rate** — % of renewals closed before expiration
 - **QBR Completion Rate** — are strategic reviews actually happening?
+- **Quote-to-Order Cycle Time** — how long from quote created to order booked?
+- **Discount Exception Rate** — what % of deals close outside pricing policy?
 {: .rationale-covers}
 
 ## Resources
@@ -105,6 +136,39 @@ Start with lifecycle fundamentals, then specialize in either sales process or cu
 | [Sales Process Mapping Guide](https://www.lucidchart.com/blog/sales-process-mapping) | Lucidchart | Guide | Free | None |
 | [HubSpot Lead Management](https://academy.hubspot.com/courses/lead-management) | HubSpot Academy | Course | Free | None |
 | [Lifecycle Stages in HubSpot](https://knowledge.hubspot.com/records/use-lifecycle-stages) | HubSpot Knowledge Base | Reference | Free | None |
+
+### Quote-to-Cash, CPQ & Billing
+
+This space is vendor-heavy by nature — the people who document Q2C best are the people selling Q2C tools. These were chosen because they teach transferable process and concepts, not because they're gated lead magnets. Trailhead and the Stripe docs are genuinely hands-on; the vendor guides are flagged as such so you can weight them accordingly.
+
+**CPQ & the Q2C Process**
+
+| Resource | Source | Type | Cost | Prerequisites |
+|----------|--------|------|------|---------------|
+| [Salesforce CPQ Basics](https://trailhead.salesforce.com/content/learn/modules/sf_cpq) | Salesforce Trailhead | Module | Free | None |
+| [Go from Lead to Cash with Salesforce CPQ and Billing](https://trailhead.salesforce.com/content/learn/trails/lead-to-cash-with-salesforce-cpq-and-billing) | Salesforce Trailhead | Trail | Free | Basic Salesforce |
+| [The Basics of the Quote-to-Cash Process](https://www.salesforce.com/sales/cpq/quote-to-cash/) | Salesforce | Guide | Free | None |
+| [Getting Started with HubSpot CPQ](https://knowledge.hubspot.com/cpq/getting-started-with-hubspot-cpq) | HubSpot Knowledge Base | Reference | Free | None |
+
+**Deal Desk & Approvals**
+
+| Resource | Source | Type | Cost | Prerequisites |
+|----------|--------|------|------|---------------|
+| [The Importance of a Deal Desk](https://www.revenueoperationsalliance.com/the-importance-of-a-deal-desk/) | Revenue Operations Alliance | Guide | Free | None |
+| [5 Steps for Designing a Deal Desk Approvals Process](https://www.revops.io/blog/5-steps-for-designing-a-deal-desk-approvals-process) | RevOps.io | Guide | Free | None |
+| [Salesforce CPQ Admin (price & approval rules)](https://trailhead.salesforce.com/content/learn/trails/cpq-admin) | Salesforce Trailhead | Trail | Free | Basic Salesforce |
+
+**Billing & Subscription Management**
+
+| Resource | Source | Type | Cost | Prerequisites |
+|----------|--------|------|------|---------------|
+| [Zuora University — Billing 101](https://university.zuora.com/path/billing-101) | Zuora | Course | Free (account required) | None |
+| [Getting Started with Subscription Billing](https://www.chargebee.com/resources/guides/subscription-billing-and-management-guide/) | Chargebee | Guide | Free | None |
+| [SaaS & Subscription Billing Glossary](https://www.chargebee.com/resources/glossaries/) | Chargebee | Reference | Free | None |
+| [How Subscriptions Work](https://docs.stripe.com/billing/subscriptions/overview) | Stripe | Docs | Free | None |
+| [Revenue Recognition with Subscriptions & Invoicing](https://docs.stripe.com/revenue-recognition/methodology/subscriptions-and-invoicing) | Stripe | Docs | Free | None |
+
+*The CPQ and billing **platforms** themselves — Salesforce Revenue Cloud, HubSpot, Zuora, Chargebee, Stripe — are covered in [Tech Stack](/tech-stack/). Pricing strategy and the unit economics of discount governance live in [Strategic Insights & Planning](/strategic-insights/).*
 
 ### Renewal & Expansion
 
@@ -162,6 +226,43 @@ You've mastered this pillar when you can confidently do the following:
 - Implement a qualification framework (BANT, MEDDIC, or custom) consistently
 - Calculate stage-to-stage conversion rates and identify the biggest drop-off
 - Document the sales process so a new rep can follow it without tribal knowledge
+
+### Quote-to-Cash & Deal Desk
+
+**Product Catalog & CPQ**
+
+- Document your product catalog: SKUs, list prices, and what's actually sellable together
+- Identify the top 3 sources of quoting errors or delays in your current process
+- Map the configuration rules (dependencies, exclusions, required add-ons) for one product line
+- Build a sample quote in a CPQ tool from catalog through to PDF
+
+**Pricing & Discounting**
+
+- Define your discount tiers and the approval threshold for each
+- Document where margin leaks today (unapproved discounts, one-off pricing, un-billed usage)
+- Build a price book with list price and floor price for one product line
+- Draft a discount-governance policy a rep could actually follow
+
+**Deal Desk & Approvals**
+
+- Map your current approval path for a non-standard deal — who touches it and how long it takes
+- Build an approval matrix: thresholds (discount %, margin, term, non-standard terms) → approver
+- Implement an automated approval workflow in CRM/CPQ for one threshold
+- Define deal-desk intake: what triggers a review and what SLA applies
+- Write a one-page deal desk charter (scope, who's on it, what they decide)
+
+**Order, Billing & Subscription**
+
+- Trace one deal end-to-end: quote → order → invoice → payment, and find every re-keying or mismatch
+- Document your amendment process and how proration is calculated
+- Build a subscription billing schedule (monthly / annual / usage) in a spreadsheet or billing tool
+- Co-term a sample account's add-ons to a single renewal date and show the before/after
+- Define the CRM-to-billing data flow: which fields must match for clean invoicing
+
+**Instrumentation**
+
+- Quantify revenue leakage from one source (e.g., discounts above policy) over the last year
+- Build a Q2C cycle-time view: how long from quote created to order booked
 
 ### Segmentation & ICP
 
@@ -246,6 +347,14 @@ Audit your last 10 churned customers — at what point could intervention have s
 
 Use Salesforce Developer Edition to build a sample opportunity pipeline with stages. Create a renewal playbook template in a doc — what would you do at 180/90/60/30 days? Design a customer segmentation framework for a hypothetical SaaS company. Build a QBR deck template that you could use with any customer.
 
+### If you have CPQ or billing access at work
+
+Audit the product catalog — how many dead or duplicate SKUs are there? Map the real approval path for a non-standard deal and time it. Trace one closed deal from quote to collected cash and mark every place data gets re-keyed or doesn't match. Then quantify leakage from your single biggest discount-leak source over the last year.
+
+### If you don't have CPQ or billing access
+
+Spin up a Salesforce Developer Edition (free) and work the Trailhead CPQ modules, or use HubSpot's free tools to build a quote. Then model the governance layer where the real RevOps work lives: an approval matrix, and a billing schedule with proration logic in a spreadsheet. The design thinking is identical regardless of tool.
+
 ### If you have CS platform access (Gainsight, ChurnZero, Totango)
 
 Build a health scoring model using real data. Start with 4 inputs, weight them based on intuition, then validate against actual renewal outcomes over 2+ quarters. Iterate. Present the model and its predictive accuracy to CS leadership. This is a career-defining portfolio piece.
@@ -264,4 +373,9 @@ Build the health scoring model in a spreadsheet. Use whatever data you can acces
 - Customer health scoring model with validation methodology
 - Digital CS program design document (segmentation, triggers, content, measurement)
 - Escalation framework with SLAs and tracking design
+- A Quote-to-Cash process map with system handoffs marked
+- An approval matrix and discount-governance policy
+- A one-page deal desk charter
+- A subscription billing schedule with amendment and proration logic
+- A revenue-leakage analysis quantifying one leak source and proposing the fix
 {: .rationale-covers}

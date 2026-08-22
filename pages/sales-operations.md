@@ -49,7 +49,8 @@ This is the function that most of HydeMind's pillar content was originally built
 | **Quota Setting** | Translating revenue targets into individual rep goals that are ambitious but achievable | [Strategic Insights](/strategic-insights/) — closely tied to territory and capacity |
 | **CRM Administration** | Configuring and maintaining the system of record — objects, fields, permissions, automation, reporting | [Tech Stack](/tech-stack/) — CRM Administration sections |
 | **Sales Process Design** | Defining what happens at each stage of a deal, who does what, and what criteria gate progression | [Customer Processes](/customer-processes/) — Sales Process, Qualification Frameworks |
-| **Deal Desk Operations** | Managing non-standard deals — approvals, custom pricing, legal review, exception handling | Not yet covered — future content area |
+| **Deal Desk Operations** | Managing non-standard deals — approvals, custom pricing, legal review, exception handling | [Customer Processes](/customer-processes/) — Quote-to-Cash & CPQ |
+| **Quote-to-Cash** | The workflow from configuring a deal through quote, approval, order, invoice, and collection | [Customer Processes](/customer-processes/) — Quote-to-Cash & CPQ |
 | **Compensation & Incentives** | Designing comp plans, SPIFs, and accelerators that drive the right behaviors | Not yet covered — future content area |
 | **Sales Engagement** | Configuring outreach sequences, cadences, and activity tracking across channels | [Tech Stack](/tech-stack/) — Sales Engagement tools |
 | **Lead Routing & Assignment** | Getting the right lead or opportunity to the right rep at the right time | [Marketing Operations](/marketing-operations/) — Lead Routing; [Tech Stack](/tech-stack/) — Automation |

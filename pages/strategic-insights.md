@@ -155,6 +155,7 @@ You've mastered this pillar when you can confidently do the following:
 - Determine LTV:CAC ratio and explain what "good" looks like
 - Build a payback period model by customer segment
 - Perform cohort analysis to identify retention trends over time
+- Model the margin impact of your discount policy — what does one point of average discount cost annually? (the governance mechanics live in [Customer Processes](/customer-processes/) — Quote-to-Cash & Deal Desk)
 
 ### Risk Identification
 
