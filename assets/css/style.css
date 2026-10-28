@@ -613,142 +613,220 @@ hr {
 .career-block h3 { margin-top: 0; }
 
 /* ============================================
-   PILLAR PAGES
+   PILLAR PAGES (v3) -- shared by the six pillars,
+   the three Ops Discipline pages and LLMs for RevOps
    ============================================ */
-.pillar-hero {
-  padding-bottom: 2rem;
-  border-bottom: 2px solid var(--color-border);
-  margin-bottom: 2.5rem;
-}
-.pillar-hero h1 { margin-bottom: 0.75rem; }
-.pillar-intro {
-  font-size: 1.15rem;
-  color: var(--color-text-muted);
-  max-width: 720px;
-  line-height: 1.7;
+.pillar-page { background: var(--ground); }
+
+.pillar-wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-/* TOC */
+/* Hero */
+.pillar-hero {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  padding: 72px 0 56px;
+}
+.pillar-hero .kicker { margin: 0 0 16px; }
+.pillar-hero h1 {
+  font-size: clamp(2.75rem, 5vw, 3.75rem);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  margin: 0 0 20px;
+  max-width: 900px;
+}
+.pillar-intro {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--ink-2);
+  max-width: 760px;
+  margin: 0;
+  text-wrap: pretty;
+}
+
+/* Body: sticky TOC rail + content */
+.pillar-body {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+  padding-top: 56px;
+  padding-bottom: 96px;
+}
+.pillar-body.no-toc { grid-template-columns: minmax(0, 1fr); }
+
 .pillar-toc {
-  background: var(--color-section-bg);
-  border: 1px solid var(--color-border);
-  border-radius: 10px;
-  padding: 1.25rem 1.75rem;
-  margin-bottom: 2.5rem;
+  position: sticky;
+  top: calc(var(--header-height) + 24px);
+  max-height: calc(100vh - var(--header-height) - 48px);
+  overflow-y: auto;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  padding: 20px;
 }
 .toc-heading {
-  font-size: 0.8rem;
-  text-transform: uppercase;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 400;
   letter-spacing: 0.08em;
-  color: var(--color-text-muted);
-  margin: 0 0 0.75rem;
-  border-bottom: none;
-  padding-bottom: 0;
-}
-.toc-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.25rem 1.75rem;
-  list-style: none;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 8px;
   padding: 0;
+  border: none;
+}
+.toc-list { list-style: none; padding: 0; margin: 0; }
+.toc-list li { margin: 0; border-bottom: 1px solid var(--line); }
+.toc-list li:last-child { border-bottom: none; }
+.toc-list a {
+  display: block;
+  padding: 9px 0 9px 10px;
+  margin-left: -10px;
+  font-size: 0.9375rem;
+  color: var(--ink-2);
+  border-left: 2px solid transparent;
+  text-decoration: none;
+}
+.toc-list a:hover { color: var(--ink); text-decoration: underline; }
+.toc-list a.is-current { color: var(--ink); font-weight: 600; border-left-color: var(--accent); }
+
+.pillar-content { min-width: 0; max-width: 860px; }
+.pillar-content [id] { scroll-margin-top: calc(var(--header-height) + 24px); }
+
+.pillar-content h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 80px 0 20px;
+  padding: 32px 0 0;
+  border-bottom: none;
+  border-top: 1px solid var(--line);
+}
+.pillar-content > h2:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+.pillar-content h3 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin: 40px 0 12px;
+}
+.pillar-content h4 { margin: 24px 0 8px; }
+.pillar-content p, .pillar-content li { max-width: 72ch; }
+
+/* Lists: plain bullets by default */
+.pillar-content ul { list-style: disc; padding-left: 1.4rem; }
+.pillar-content ul li { margin-bottom: 0.5rem; line-height: 1.6; }
+.pillar-content ul li::marker { color: var(--muted); }
+
+/* Checklist: visual-only square markers on lists after the
+   Checklist heading and before the next section heading */
+.pillar-content #checklist ~ ul { list-style: none; padding-left: 0; }
+.pillar-content #checklist ~ ul li {
+  position: relative;
+  padding: 10px 0 10px 32px;
   margin: 0;
+  border-bottom: 1px solid var(--line);
 }
-.toc-list li { margin: 0; }
-.toc-list a { font-size: 0.9rem; font-weight: 500; }
+.pillar-content #checklist ~ ul li:last-child { border-bottom: none; }
+.pillar-content #checklist ~ ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 3px;
+  background: var(--surface);
+}
+.pillar-content #checklist ~ h2 ~ ul { list-style: disc; padding-left: 1.4rem; }
+.pillar-content #checklist ~ h2 ~ ul li { padding: 0; margin-bottom: 0.5rem; border-bottom: none; }
+.pillar-content #checklist ~ h2 ~ ul li::before { content: none; }
 
-.pillar-content h2:first-child { margin-top: 0; }
-
-/* Related KPIs box */
+/* Related KPIs box: navy panel */
 .kpi-box {
-  border: 1px solid var(--color-border);
-  border-radius: 10px;
-  padding: 1.5rem 1.75rem;
-  margin: 1.5rem 0;
-  background: var(--color-section-bg);
+  background: var(--ink);
+  color: var(--on-ink-2);
+  border-radius: var(--radius-card);
+  padding: 24px 28px;
+  margin: 20px 0 28px;
 }
-.kpi-box h4 { color: var(--color-secondary); margin-top: 0; margin-bottom: 0.75rem; }
+.kpi-box h4 {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--on-ink-muted);
+  margin: 0 0 12px;
+}
+.kpi-box strong { color: #fff; }
+.kpi-box a { color: var(--on-ink); text-decoration: underline; }
 .kpi-box ul { margin-bottom: 0; }
+.pillar-content .kpi-box ul li::marker { color: var(--accent-light); }
 .kpi-box p:last-child { margin-bottom: 0; }
 
-/* Example boxes */
+/* Example boxes: tint, no left border (v3 rule) */
 .example-box {
-  background: var(--color-section-bg);
-  border-left: 4px solid var(--color-accent);
-  padding: 1.25rem 1.5rem;
-  margin: 1.5rem 0;
-  border-radius: 0 10px 10px 0;
+  background: var(--tint);
+  border-radius: var(--radius-card);
+  padding: 24px 28px;
+  margin: 24px 0;
 }
 .example-box h4 { margin-top: 0; }
+
+/* Tool landscape cards */
+.tool-category {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  padding: 20px 24px;
+  margin-bottom: 12px;
+}
+.pillar-content .tool-category h3 { font-size: 1.2rem; margin: 0 0 6px; }
+.tool-category p { margin-bottom: 6px; }
+.tool-category p:last-child { margin-bottom: 0; }
+.tool-examples { font-size: 0.9375rem; color: var(--muted); }
 
 /* ============================================
    TABLES
    ============================================ */
 table {
   width: 100%;
-  border-collapse: collapse;
-  margin: 1.5rem 0;
-  font-size: 0.9rem;
-  border: 1px solid var(--color-border);
-  border-radius: 10px;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 20px 0 28px;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
   overflow: hidden;
 }
-thead { background: var(--color-section-bg); }
+thead { background: var(--ground); }
 th {
-  font-weight: 600;
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   text-align: left;
-  padding: 0.85rem 1rem;
-  border-bottom: 2px solid var(--color-border);
-  color: var(--color-primary);
-  font-size: 0.85rem;
+  color: var(--muted);
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
 }
 td {
-  padding: 0.85rem 1rem;
-  border-bottom: 1px solid var(--color-border);
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
   vertical-align: top;
 }
 tr:last-child td { border-bottom: none; }
-tbody tr:hover { background: var(--color-section-bg); }
+tbody tr:hover { background: var(--tint); }
 td:first-child a { font-weight: 500; }
-
-/* ============================================
-   CHECKLISTS (Pillar pages)
-   ============================================ */
-.pillar-content ul {
-  list-style: none;
-  padding-left: 0;
-}
-.pillar-content ul li {
-  position: relative;
-  padding-left: 2rem;
-  margin-bottom: 0.6rem;
-  line-height: 1.6;
-}
-.pillar-content ul li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.35rem;
-  width: 18px;
-  height: 18px;
-  border: 2px solid var(--color-border);
-  border-radius: 4px;
-  background: var(--color-white);
-}
-
-/* Override for KPI box lists and regular bullet lists */
-.kpi-box ul li,
-.pillar-content .rationale-covers li {
-  padding-left: 0;
-}
-.kpi-box ul li::before,
-.pillar-content .rationale-covers li::before {
-  content: none;
-}
-.kpi-box ul,
-.pillar-content .rationale-covers {
-  list-style: disc;
-  padding-left: 1.5rem;
-}
+td .chip { white-space: normal; text-align: left; }
 
 /* ============================================
    FOOTER
@@ -871,7 +949,6 @@ td:first-child a { font-weight: 500; }
   .career-grid { grid-template-columns: 1fr; }
   .kpi-grid { grid-template-columns: repeat(3, 1fr); }
   .kpi-tooltip { width: 200px; font-size: 0.75rem; }
-  .toc-list { flex-direction: column; gap: 0.25rem; }
 
   table {
     display: block;
@@ -897,6 +974,8 @@ td:first-child a { font-weight: 500; }
    MOBILE NAV (<=1024px: six items + CTA do not fit)
    ============================================ */
 @media (max-width: 1024px) {
+  .pillar-body { grid-template-columns: minmax(0, 1fr); gap: 32px; padding-top: 32px; }
+  .pillar-toc { position: static; max-height: none; }
   .header-inner { position: relative; }
   .nav-toggle { display: inline-flex; }
   .site-nav {
@@ -931,6 +1010,15 @@ td:first-child a { font-weight: 500; }
 @media (max-width: 768px) {
   .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .footer-brand { grid-column: 1 / -1; }
+}
+
+@media (max-width: 720px) {
+  .pillar-wrap { padding-left: 1rem; padding-right: 1rem; }
+  .pillar-hero { padding: 48px 0 40px; }
+  .pillar-intro { font-size: 1.125rem; }
+  .pillar-content h2 { margin-top: 56px; padding-top: 24px; }
+  .pillar-body { padding-bottom: 64px; }
+  .kpi-box, .example-box { padding: 20px; }
 }
 
 @media (max-width: 480px) {

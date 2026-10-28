@@ -80,6 +80,57 @@
     });
   });
 
+  // Resource tables: show Type and Cost cells as chips (styling only)
+  document.querySelectorAll('.pillar-content table').forEach(function (table) {
+    var heads = Array.prototype.map.call(table.querySelectorAll('thead th'), function (th) {
+      return th.textContent.trim().toLowerCase();
+    });
+    heads.forEach(function (h, i) {
+      if (h !== 'type' && h !== 'cost') return;
+      table.querySelectorAll('tbody tr').forEach(function (tr) {
+        var td = tr.children[i];
+        if (!td || td.querySelector('*') || !td.textContent.trim()) return;
+        var span = document.createElement('span');
+        span.className = 'chip';
+        span.textContent = td.textContent.trim();
+        td.textContent = '';
+        td.appendChild(span);
+      });
+    });
+  });
+
+  // On-this-page: mark the section currently in view
+  var tocLinks = document.querySelectorAll('.pillar-toc a[href^="#"]');
+  if (tocLinks.length) {
+    var byId = {};
+    var targets = [];
+    tocLinks.forEach(function (a) {
+      var el = document.getElementById(decodeURIComponent(a.getAttribute('href').slice(1)));
+      if (el) { byId[el.id] = a; targets.push(el); }
+    });
+    var currentId = null;
+    var update = function () {
+      var line = window.innerHeight * 0.3;
+      var id = targets.length ? targets[0].id : null;
+      targets.forEach(function (el) { if (el.getBoundingClientRect().top <= line) id = el.id; });
+      if ((window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight - 2 && targets.length) {
+        id = targets[targets.length - 1].id;
+      }
+      if (id === currentId) return;
+      currentId = id;
+      tocLinks.forEach(function (a) { a.classList.remove('is-current'); a.removeAttribute('aria-current'); });
+      if (byId[id]) { byId[id].classList.add('is-current'); byId[id].setAttribute('aria-current', 'true'); }
+    };
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function () { update(); ticking = false; });
+    }, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  }
+
   // KPI tooltip touch support
   document.querySelectorAll('.kpi-item').forEach(function (item) {
     item.addEventListener('click', function () {
