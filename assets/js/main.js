@@ -43,6 +43,20 @@
     });
   }
 
+  // Escape closes open dropdowns and the mobile menu
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    dropdownToggles.forEach(function (t) {
+      t.setAttribute('aria-expanded', 'false');
+      t.parentElement.classList.remove('open');
+    });
+    if (toggle && nav && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.focus();
+    }
+  });
+
   // Back to top
   const btn = document.getElementById('back-to-top');
   if (btn) {

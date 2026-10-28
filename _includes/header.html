@@ -1,19 +1,19 @@
 <header class="site-header">
   <div class="header-inner">
     <a href="{{ '/' | relative_url }}" class="site-logo">
-      <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="HydeMind" width="52" height="52">
+      <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="" width="40" height="40">
       <span>HydeMind</span>
     </a>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
       <span class="hamburger"></span>
     </button>
-    <nav class="site-nav" id="site-nav">
-      <a href="{{ '/' | relative_url }}" class="nav-link{% if page.url == '/' %} active{% endif %}">Home</a>
-      <a href="{{ '/llms-for-revops/' | relative_url }}" class="nav-link{% if page.url == '/llms-for-revops/' %} active{% endif %}">LLMs for RevOps</a>
-      <a href="{{ '/learning-path/' | relative_url }}" class="nav-link{% if page.url == '/learning-path/' %} active{% endif %}">Learning Path</a>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <a href="{{ '/' | relative_url }}" class="nav-link{% if page.url == '/' %} active{% endif %}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
+      <a href="{{ '/llms-for-revops/' | relative_url }}" class="nav-link{% if page.url == '/llms-for-revops/' %} active{% endif %}"{% if page.url == '/llms-for-revops/' %} aria-current="page"{% endif %}>LLMs for RevOps</a>
+      <a href="{{ '/learning-path/' | relative_url }}" class="nav-link{% if page.url == '/learning-path/' %} active{% endif %}"{% if page.url == '/learning-path/' %} aria-current="page"{% endif %}>Learning Path</a>
       <div class="nav-dropdown">
         <button class="nav-link dropdown-toggle" aria-expanded="false">
-          Ops Disciplines <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Ops Disciplines <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div class="dropdown-menu">
           <a href="{{ '/sales-operations/' | relative_url }}" class="dropdown-item{% if page.url == '/sales-operations/' %} active{% endif %}">Sales Ops</a>
@@ -23,7 +23,7 @@
       </div>
       <div class="nav-dropdown">
         <button class="nav-link dropdown-toggle" aria-expanded="false">
-          Pillars <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Pillars <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
         <div class="dropdown-menu">
           <a href="{{ '/data/' | relative_url }}" class="dropdown-item{% if page.url == '/data/' %} active{% endif %}">Data</a>
@@ -34,7 +34,7 @@
           <a href="{{ '/strategic-insights/' | relative_url }}" class="dropdown-item{% if page.url == '/strategic-insights/' %} active{% endif %}">Strategic Insights &amp; Planning</a>
         </div>
       </div>
+      <a href="{{ '/learning-path/' | relative_url }}" class="btn btn-ink nav-cta">Start learning</a>
     </nav>
   </div>
-  <div class="header-accent"></div>
 </header>
