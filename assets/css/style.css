@@ -42,7 +42,6 @@
   --color-border: var(--line);
   --color-text: var(--ink-2);
   --color-text-muted: var(--muted);
-  --color-success: #48bb78; /* retired in v3; still used by Learning Path until PR 4 */
   --color-white: #ffffff;
 
   --font-family: var(--font-body);
@@ -730,6 +729,215 @@ hr {
 .tool-category p { margin-bottom: 6px; }
 .tool-category p:last-child { margin-bottom: 0; }
 .tool-examples { font-size: 0.9375rem; color: var(--muted); }
+
+/* ============================================
+   LEARNING PATH (v3) -- page script renders the
+   level tabs, pillar accordions and background finder
+   ============================================ */
+.lp-body { padding-top: 56px; padding-bottom: 96px; }
+.lp-page .pillar-content { max-width: 920px; margin: 0 auto; }
+
+.lp-pick-prompt { font-size: 1.0625rem; color: var(--ink-2); margin-bottom: 24px; }
+
+/* Level tabs */
+.lp-selector {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.lp-level-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  min-height: 44px;
+  padding: 18px 18px 16px;
+  text-align: left;
+  background: var(--surface);
+  color: var(--ink-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  font-family: var(--font-body);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.lp-level-btn:hover { border-color: var(--accent); }
+.lp-level-btn.active { background: var(--ink); border-color: var(--ink); color: var(--on-ink-2); }
+.lp-level-bars { display: flex; flex-direction: column; gap: 4px; width: 100%; height: 32px; margin-bottom: 12px; }
+.lp-level-bars span { display: block; height: 5px; border-radius: 2px; background: var(--accent); }
+.lp-level-btn.active .lp-level-bars span { background: var(--accent-light); }
+.lp-level-num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.lp-level-btn.active .lp-level-num { color: var(--on-ink-muted); }
+.lp-level-name {
+  font-family: var(--font-display);
+  font-size: 1.375rem;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.15;
+  color: var(--ink);
+}
+.lp-level-btn.active .lp-level-name { color: #fff; }
+.lp-level-sub { font-size: 0.875rem; color: var(--muted); }
+.lp-level-btn.active .lp-level-sub { color: var(--on-ink-2); }
+
+/* Level detail */
+.lp-detail-header {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  padding: 24px 28px;
+  margin-bottom: 32px;
+}
+.lp-meta { font-size: 0.9375rem; color: var(--ink-2); margin-bottom: 4px; }
+.lp-meta strong { color: var(--ink); }
+.lp-description { margin: 12px 0 0; color: var(--ink-2); }
+
+.pillar-content .lp-section-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 12px;
+  padding: 0;
+  border: none;
+}
+
+/* Pillar accordions */
+.lp-pillar-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+.lp-pillar-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  min-height: 56px;
+  padding: 14px 18px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-family: var(--font-body);
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.lp-pillar-header:hover { background: var(--ground); }
+.lp-pillar-dot { width: 8px; height: 8px; border-radius: 2px; background: var(--accent); flex-shrink: 0; }
+.lp-pillar-info { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.lp-pillar-name { font-weight: 600; color: var(--ink); }
+.lp-pillar-preview {
+  font-size: 0.875rem;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 2px;
+}
+.lp-pillar-arrow { color: var(--muted); flex-shrink: 0; transition: transform 0.15s; }
+.lp-pillar-arrow.open { transform: rotate(180deg); }
+.lp-pillar-body { display: none; padding: 4px 18px 18px 40px; border-top: 1px solid var(--line); }
+.lp-pillar-body.open { display: block; }
+.lp-pillar-focus { margin: 14px 0; color: var(--ink-2); }
+.lp-items-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.pillar-content .lp-items { list-style: none; padding: 0; margin: 0; }
+.pillar-content .lp-items li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 6px;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+.lp-item-dot { width: 5px; height: 5px; border-radius: 1px; margin-top: 9px; background: var(--accent-light); flex-shrink: 0; }
+
+.lp-ready-when {
+  background: var(--tint);
+  border-radius: var(--radius-card);
+  padding: 20px 24px;
+  margin-top: 24px;
+}
+.lp-ready-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.lp-ready-text { margin: 0; color: var(--ink-2); }
+
+/* Background finder */
+.lp-bg-pills { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0; }
+.lp-bg-pill {
+  min-height: 44px;
+  padding: 0 16px;
+  background: var(--surface);
+  color: var(--ink-2);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-btn);
+  font-family: var(--font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.lp-bg-pill:hover { border-color: var(--ink); }
+.lp-bg-pill.active { background: var(--ink); border-color: var(--ink); color: #fff; }
+.lp-bg-result {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  padding: 20px 24px;
+}
+.lp-bg-strong, .lp-bg-needs { margin-bottom: 6px; color: var(--ink-2); }
+.lp-bg-needs { margin-bottom: 0; }
+.lp-bg-strong .lp-label, .lp-bg-needs .lp-label { font-weight: 600; color: var(--ink); }
+
+/* Start learning links */
+.lp-pillar-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.lp-pillar-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 16px;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-btn);
+  color: var(--ink);
+  font-weight: 500;
+  text-decoration: none;
+}
+.lp-pillar-links a:hover { border-color: var(--ink); text-decoration: none; }
+
+@media (max-width: 900px) {
+  .lp-selector { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+  .lp-body { padding-top: 32px; padding-bottom: 64px; }
+  .lp-level-btn { padding: 14px; }
+  .lp-level-name { font-size: 1.125rem; }
+  .lp-detail-header, .lp-ready-when, .lp-bg-result { padding: 18px; }
+  .lp-pillar-body { padding-left: 18px; }
+}
 
 /* ============================================
    TABLES
