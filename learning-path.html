@@ -34,337 +34,16 @@ intro: "The six pillars teach you what RevOps covers. This page tells you what o
   <h2 id="start">Start Learning</h2>
   <p>Pick your level. Go to the pillar pages. Work the checklists. Build the portfolio pieces. The resources are free. The structure is here. The only thing between you and the next level is the work.</p>
   <div class="lp-pillar-links">
-    <a href="/data/">Data</a>
-    <a href="/customer-processes/">Customer Processes</a>
-    <a href="/kpi-reporting/">KPIs &amp; Reporting</a>
-    <a href="/tech-stack/">Tech Stack</a>
-    <a href="/enablement/">Enablement</a>
-    <a href="/strategic-insights/">Strategic Insights</a>
-    <a href="/llms-for-revops/">LLMs for RevOps</a>
+    <a href="{{ '/data/' | relative_url }}">Data</a>
+    <a href="{{ '/customer-processes/' | relative_url }}">Customer Processes</a>
+    <a href="{{ '/kpi-reporting/' | relative_url }}">KPIs &amp; Reporting</a>
+    <a href="{{ '/tech-stack/' | relative_url }}">Tech Stack</a>
+    <a href="{{ '/enablement/' | relative_url }}">Enablement</a>
+    <a href="{{ '/strategic-insights/' | relative_url }}">Strategic Insights</a>
+    <a href="{{ '/llms-for-revops/' | relative_url }}">LLMs for RevOps</a>
   </div>
 </section>
 
-<!-- ════════════ STYLES ════════════ -->
-<style>
-/* --- Learning Path Specific Styles --- */
-.lp-pick-prompt {
-  color: var(--color-text-muted);
-  margin-bottom: 2rem;
-  font-size: 0.95rem;
-}
-
-/* Level Selector Bar */
-.lp-selector {
-  display: flex;
-  gap: 0;
-  margin-bottom: 2rem;
-  border-radius: 8px;
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-}
-
-.lp-level-btn {
-  flex: 1;
-  padding: 1rem 1.25rem;
-  cursor: pointer;
-  text-align: left;
-  transition: all 0.2s ease;
-  background: var(--color-section-bg);
-  color: var(--color-text);
-  border: none;
-  border-right: 1px solid var(--color-border);
-  font-family: var(--font-family);
-  position: relative;
-}
-.lp-level-btn:last-child { border-right: none; }
-.lp-level-btn:not(.active) { opacity: 0.6; }
-.lp-level-btn:not(.active):hover { opacity: 0.85; background: #edf2f7; }
-
-.lp-level-btn.active { color: white; opacity: 1; }
-
-.lp-level-num {
-  font-size: 0.65rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  opacity: 0.65;
-  margin-bottom: 2px;
-}
-
-.lp-level-name {
-  font-size: 1.05rem;
-  font-weight: 600;
-  line-height: 1.3;
-}
-
-.lp-level-sub {
-  font-size: 0.8rem;
-  opacity: 0.75;
-  margin-top: 1px;
-}
-
-/* Level Detail Header */
-.lp-detail-header {
-  background: var(--color-section-bg);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  padding: 1.25rem 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.lp-meta {
-  font-size: 0.875rem;
-  color: var(--color-text-muted);
-  margin-bottom: 0.25rem;
-}
-
-.lp-meta strong { color: var(--color-text); }
-
-.lp-description {
-  font-size: 0.925rem;
-  line-height: 1.65;
-  color: var(--color-text);
-  margin-top: 0.75rem;
-  margin-bottom: 0;
-}
-
-/* Section Label */
-.lp-section-label {
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--color-text-muted);
-  margin-bottom: 0.75rem;
-  margin-top: 0;
-  border: none;
-  padding: 0;
-}
-
-/* Pillar Accordion Cards */
-.lp-pillar-card {
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  margin-bottom: 0.4rem;
-  background: var(--color-white);
-  overflow: hidden;
-  transition: box-shadow 0.15s ease;
-}
-.lp-pillar-card:hover { box-shadow: 0 1px 4px rgba(0,0,0,0.04); }
-
-.lp-pillar-header {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.85rem 1.1rem;
-  cursor: pointer;
-  border: none;
-  background: transparent;
-  width: 100%;
-  text-align: left;
-  font-family: var(--font-family);
-  color: var(--color-text);
-}
-
-.lp-pillar-dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.lp-pillar-info { flex: 1; min-width: 0; display: flex; flex-direction: column; }
-
-.lp-pillar-name {
-  font-size: 0.925rem;
-  font-weight: 600;
-  color: var(--color-text);
-  display: block;
-}
-
-.lp-pillar-preview {
-  font-size: 0.8rem;
-  color: var(--color-text-muted);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-top: 2px;
-  display: block;
-}
-
-.lp-pillar-arrow {
-  font-size: 1rem;
-  color: #a0aec0;
-  transition: transform 0.2s ease;
-  flex-shrink: 0;
-  line-height: 1;
-}
-.lp-pillar-arrow.open { transform: rotate(180deg); }
-
-.lp-pillar-body {
-  display: none;
-  padding: 0 1.1rem 1.1rem;
-  border-top: 1px solid var(--color-border);
-}
-.lp-pillar-body.open { display: block; }
-
-.lp-pillar-focus {
-  font-size: 0.875rem;
-  line-height: 1.65;
-  color: var(--color-text);
-  margin: 0.85rem 0;
-}
-
-.lp-items-label {
-  font-size: 0.65rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--color-text-muted);
-  margin-bottom: 0.5rem;
-}
-
-.lp-items {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.lp-items li {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-  font-size: 0.875rem;
-  line-height: 1.55;
-  color: var(--color-text);
-  margin-bottom: 0.4rem;
-}
-
-.lp-item-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  margin-top: 8px;
-  flex-shrink: 0;
-}
-
-/* Ready When Box */
-.lp-ready-when {
-  border-radius: 8px;
-  padding: 1rem 1.25rem;
-  margin-top: 1.5rem;
-  border-left: 3px solid;
-}
-
-.lp-ready-label {
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 0.4rem;
-}
-
-.lp-ready-text {
-  font-size: 0.875rem;
-  line-height: 1.65;
-  color: var(--color-text);
-  margin: 0;
-}
-
-/* Background Finder */
-.lp-background-section h2 {
-  margin-top: 2.5rem;
-}
-
-.lp-bg-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 1rem;
-}
-
-.lp-bg-pill {
-  padding: 0.4rem 1rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  cursor: pointer;
-  transition: all 0.15s ease;
-  border: 1px solid var(--color-border);
-  background: var(--color-section-bg);
-  color: var(--color-text);
-  font-family: var(--font-family);
-}
-.lp-bg-pill:hover { background: #edf2f7; }
-.lp-bg-pill.active {
-  background: var(--color-accent);
-  color: white;
-  border-color: var(--color-accent);
-}
-
-.lp-bg-result {
-  background: var(--color-section-bg);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  padding: 1rem 1.25rem;
-  animation: lpFadeIn 0.2s ease;
-}
-
-.lp-bg-strong, .lp-bg-needs {
-  font-size: 0.875rem;
-  margin-bottom: 0.35rem;
-}
-.lp-bg-strong:last-child, .lp-bg-needs:last-child { margin-bottom: 0; }
-
-.lp-bg-strong .lp-label { font-weight: 600; color: var(--color-success); }
-.lp-bg-needs .lp-label { font-weight: 600; color: #e53e3e; }
-
-/* Note & Start sections */
-.lp-note {
-  margin-top: 2.5rem;
-}
-
-.lp-start {
-  margin-top: 2rem;
-}
-
-.lp-pillar-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-.lp-pillar-links a {
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--color-border);
-  border-radius: 6px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--color-accent);
-  transition: all 0.15s ease;
-  text-decoration: none;
-}
-.lp-pillar-links a:hover {
-  background: var(--color-section-bg);
-  border-color: var(--color-accent);
-  text-decoration: none;
-}
-
-@keyframes lpFadeIn {
-  from { opacity: 0; transform: translateY(-4px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .lp-selector {
-    flex-direction: column;
-    border-radius: 8px;
-  }
-  .lp-level-btn { border-right: none; border-bottom: 1px solid var(--color-border); }
-  .lp-level-btn:last-child { border-bottom: none; }
-}
-</style>
 
 <!-- ════════════ DATA & LOGIC ════════════ -->
 <script>
@@ -376,7 +55,6 @@ intro: "The six pillars teach you what RevOps covers. This page tells you what o
       experience: "0–2 years in operations",
       description: "You execute well within defined processes. You’re building technical fluency and learning how revenue teams actually work.",
       readyWhen: "You can independently manage CRM configuration, build reports without guidance, explain how revenue flows through your company’s systems, and articulate what each metric means and why it matters. People trust your data.",
-      color: "#48bb78",
       pillars: {
         "Data": { focus: "CRM data quality fundamentals — what makes data ‘good,’ how to audit it, deduplication basics", items: ["Audit your CRM for completeness","Calculate a data completeness score","Identify top 5 quality issues","Salesforce Data Quality module / HubSpot Data Quality Tools"] },
         "Tech Stack": { focus: "CRM administration — objects, fields, page layouts, permissions, basic reports. Get certified.", items: ["Salesforce Admin Beginner Trail or HubSpot Sales Software Cert","Build custom reports and dashboards","Understand record types and page layouts","Learn basic workflow/flow automation"] },
@@ -393,7 +71,6 @@ intro: "The six pillars teach you what RevOps covers. This page tells you what o
       experience: "2–4 years in operations",
       description: "You don’t just execute — you design processes and connect systems. You see how things fit together across teams.",
       readyWhen: "You can design a process end-to-end, not just maintain one. You evaluate and recommend tools. Your forecast accuracy analysis changes how leadership makes decisions. You think in systems, not tasks.",
-      color: "#4a7c9b",
       pillars: {
         "Data": { focus: "Data governance — field ownership, validation rules, data dictionaries. Enrichment strategy and vendor evaluation.", items: ["Define field ownership for key objects","Create validation rules and a data dictionary","Evaluate enrichment vendors (ZoomInfo, Apollo, Clay)","Map system-to-system data flows"] },
         "Tech Stack": { focus: "Workflow automation (Flows, HubSpot Workflows). Integration platforms. Understand APIs conceptually.", items: ["Build automated lead routing","Configure native integrations between 2+ systems","Build a Zapier/Workato workflow","Document your integration architecture"] },
@@ -410,7 +87,6 @@ intro: "The six pillars teach you what RevOps covers. This page tells you what o
       experience: "4–7 years in operations",
       description: "You operate cross-functionally. You design the frameworks that others execute. Your work directly influences revenue outcomes and go-to-market decisions.",
       readyWhen: "You’ve designed frameworks that survived your absence. Leadership asks for your recommendation, not just your analysis. You’ve hired, developed, or influenced the growth of other ops people.",
-      color: "#2c5282",
       pillars: {
         "Data": { focus: "Advanced data architecture — master data management, governance at scale. The modern data stack.", items: ["Design a data governance program","Define systems of record across the tech stack","Evaluate whether your org needs a data warehouse","Build a data quality SLA with stakeholders"] },
         "Tech Stack": { focus: "Tool evaluation frameworks. Stack architecture. Build-vs-buy analysis. Implementation planning.", items: ["Lead a tool evaluation with requirements doc","Build a stack architecture diagram with data flows","Identify and eliminate tool redundancies","Create a 12-month tech roadmap; measure tool ROI"] },
@@ -427,7 +103,6 @@ intro: "The six pillars teach you what RevOps covers. This page tells you what o
       experience: "7+ years in operations",
       description: "You design the revenue operating system. You influence organizational structure, own the metrics that matter to the board, and build the team that makes it all work.",
       readyWhen: "This level isn’t defined by a checklist — it’s defined by outcomes. The revenue engine works. The team you built operates without you in the room. Leadership trusts your judgment on decisions that move the business.",
-      color: "#1a365d",
       pillars: {
         "Data": { focus: "Enterprise data strategy. Architecture that scales. Privacy/compliance implications.", items: ["Own the enterprise data strategy","Design data architecture that scales 3x","Build and enforce governance across all revenue systems","Evaluate/implement a data warehouse if needed"] },
         "Tech Stack": { focus: "Revenue technology strategy. Vendor management. Multi-year roadmap. Platform migration.", items: ["Own the technology budget","Negotiate enterprise contracts","Build a 3-year tech roadmap aligned to strategy","Lead a platform migration"] },
@@ -439,11 +114,6 @@ intro: "The six pillars teach you what RevOps covers. This page tells you what o
       }
     }
   ];
-
-  var pillarColors = {
-    "Data": "#48bb78", "Tech Stack": "#4a7c9b", "Customer Processes": "#e53e3e",
-    "Enablement": "#d69e2e", "KPIs & Reporting": "#805ad5", "Strategic Insights": "#2c5282", "LLMs": "#718096"
-  };
 
   var backgrounds = [
     { label: "Sales", strong: "Customer Processes, Enablement", needs: "Data, Tech Stack (CRM admin), KPIs (beyond quota attainment)" },
@@ -459,15 +129,21 @@ intro: "The six pillars teach you what RevOps covers. This page tells you what o
   var activeBg = null;
   var openPillars = {};
 
-  function render() {
+  // Motion-bar level marker: bars lengthen and multiply Foundation -> Architect
+  var barSets = [[30], [50, 26], [70, 34, 52], [100, 46, 70, 30]];
+  function levelBars(i) {
+    return barSets[i].map(function(w) { return '<span style="width:' + w + '%"></span>'; }).join("");
+  }
+
+  function render(focusSel) {
     // Level selector
     var sel = document.getElementById("lp-selector");
     sel.innerHTML = levels.map(function(l, i) {
       var isActive = l.id === activeLevel;
       return '<button class="lp-level-btn' + (isActive ? ' active' : '') + '" ' +
         'data-level="' + l.id + '" ' +
-        'role="tab" aria-selected="' + isActive + '" ' +
-        'style="' + (isActive ? 'background:' + l.color + ';border-color:' + l.color + ';' : '') + '">' +
+        'role="tab" aria-selected="' + isActive + '" tabindex="' + (isActive ? '0' : '-1') + '">' +
+        '<span class="lp-level-bars" aria-hidden="true">' + levelBars(i) + '</span>' +
         '<div class="lp-level-num">Level ' + (i+1) + '</div>' +
         '<div class="lp-level-name">' + l.name + '</div>' +
         '<div class="lp-level-sub">' + l.subtitle + '</div>' +
@@ -478,7 +154,18 @@ intro: "The six pillars teach you what RevOps covers. This page tells you what o
       btn.addEventListener("click", function() {
         activeLevel = this.getAttribute("data-level");
         openPillars = {};
-        render();
+        render('[data-level="' + activeLevel + '"]');
+      });
+      // Arrow keys move between level tabs
+      btn.addEventListener("keydown", function(e) {
+        var idx = levels.findIndex(function(l) { return l.id === activeLevel; });
+        if (e.key === "ArrowRight" || e.key === "ArrowDown") idx = (idx + 1) % levels.length;
+        else if (e.key === "ArrowLeft" || e.key === "ArrowUp") idx = (idx + levels.length - 1) % levels.length;
+        else return;
+        e.preventDefault();
+        activeLevel = levels[idx].id;
+        openPillars = {};
+        render('[data-level="' + activeLevel + '"]');
       });
     });
 
@@ -489,22 +176,21 @@ intro: "The six pillars teach you what RevOps covers. This page tells you what o
     var pillarsHtml = Object.keys(level.pillars).map(function(name) {
       var data = level.pillars[name];
       var isOpen = openPillars[name];
-      var color = pillarColors[name];
       return '<div class="lp-pillar-card">' +
         '<button class="lp-pillar-header" data-pillar="' + name + '" aria-expanded="' + (isOpen ? 'true' : 'false') + '">' +
-          '<span class="lp-pillar-dot" style="background:' + color + '"></span>' +
+          '<span class="lp-pillar-dot" aria-hidden="true"></span>' +
           '<span class="lp-pillar-info">' +
             '<span class="lp-pillar-name">' + name + '</span>' +
             '<span class="lp-pillar-preview">' + data.focus + '</span>' +
           '</span>' +
-          '<span class="lp-pillar-arrow' + (isOpen ? ' open' : '') + '">▾</span>' +
+          '<svg class="lp-pillar-arrow' + (isOpen ? ' open' : '') + '" width="14" height="14" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
         '</button>' +
         '<div class="lp-pillar-body' + (isOpen ? ' open' : '') + '">' +
           '<p class="lp-pillar-focus">' + data.focus + '</p>' +
           '<div class="lp-items-label">Key Actions & Resources</div>' +
           '<ul class="lp-items">' +
             data.items.map(function(item) {
-              return '<li><span class="lp-item-dot" style="background:' + color + '"></span><span>' + item + '</span></li>';
+              return '<li><span class="lp-item-dot" aria-hidden="true"></span><span>' + item + '</span></li>';
             }).join("") +
           '</ul>' +
         '</div>' +
@@ -519,8 +205,8 @@ intro: "The six pillars teach you what RevOps covers. This page tells you what o
       '</div>' +
       '<h3 class="lp-section-label">What to focus on</h3>' +
       pillarsHtml +
-      '<div class="lp-ready-when" style="background:' + level.color + '0D;border-left-color:' + level.color + '">' +
-        '<div class="lp-ready-label" style="color:' + level.color + '">You’re ready to move on when</div>' +
+      '<div class="lp-ready-when">' +
+        '<div class="lp-ready-label">You’re ready to move on when</div>' +
         '<p class="lp-ready-text">' + level.readyWhen + '</p>' +
       '</div>';
 
@@ -528,21 +214,21 @@ intro: "The six pillars teach you what RevOps covers. This page tells you what o
       btn.addEventListener("click", function() {
         var name = this.getAttribute("data-pillar");
         openPillars[name] = !openPillars[name];
-        render();
+        render('[data-pillar="' + name + '"]');
       });
     });
 
     // Background finder
     var pills = document.getElementById("lp-bg-pills");
     pills.innerHTML = backgrounds.map(function(bg) {
-      return '<button class="lp-bg-pill' + (activeBg === bg.label ? ' active' : '') + '" data-bg="' + bg.label + '">' + bg.label + '</button>';
+      return '<button class="lp-bg-pill' + (activeBg === bg.label ? ' active' : '') + '" data-bg="' + bg.label + '" aria-pressed="' + (activeBg === bg.label) + '">' + bg.label + '</button>';
     }).join("");
 
     pills.querySelectorAll(".lp-bg-pill").forEach(function(btn) {
       btn.addEventListener("click", function() {
         var label = this.getAttribute("data-bg");
         activeBg = activeBg === label ? null : label;
-        render();
+        render('[data-bg="' + label + '"]');
       });
     });
 
@@ -555,6 +241,12 @@ intro: "The six pillars teach you what RevOps covers. This page tells you what o
       '</div>';
     } else {
       result.innerHTML = "";
+    }
+
+    // Re-rendering replaces the buttons; put keyboard focus back where it was
+    if (typeof focusSel === "string") {
+      var f = document.querySelector(focusSel);
+      if (f) f.focus();
     }
   }
 
