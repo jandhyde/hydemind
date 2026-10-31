@@ -4,13 +4,16 @@ title: "Blog"
 description: "AI developments that change how RevOps teams work — tools, integrations, and what they mean for practitioners."
 permalink: /blog/
 ---
-<div class="blog-index">
-  <div class="content-container">
-
-    <header class="blog-hero">
+<div class="pillar-page blog-index">
+  <header class="pillar-hero">
+    <div class="pillar-wrap">
       <h1>Blog</h1>
-      <p class="blog-intro">AI developments that change how RevOps teams work — tools, integrations, and what they mean for practitioners.</p>
-    </header>
+      <p class="pillar-intro">AI developments that change how RevOps teams work — tools, integrations, and what they mean for practitioners.</p>
+    </div>
+  </header>
+
+  <div class="pillar-wrap blog-body">
+  <div class="blog-column">
 
     <div id="blog-posts">
       {% for post in site.posts %}
@@ -35,16 +38,17 @@ permalink: /blog/
 
     <nav class="blog-pagination" id="blog-pagination" aria-label="Blog pagination">
       <button class="pagination-btn pagination-prev" id="pagination-prev" aria-label="Newer posts">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M13 4l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M13 4l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span>Newer</span>
       </button>
       <span class="pagination-info" id="pagination-info"></span>
       <button class="pagination-btn pagination-next" id="pagination-next" aria-label="Older posts">
         <span>Older</span>
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
     </nav>
 
+  </div>
   </div>
 </div>
 
