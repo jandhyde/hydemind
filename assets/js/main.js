@@ -130,11 +130,4 @@
     window.addEventListener('resize', update);
     update();
   }
-
-  // KPI tooltip touch support
-  document.querySelectorAll('.kpi-item').forEach(function (item) {
-    item.addEventListener('click', function () {
-      this.classList.toggle('active');
-    });
-  });
 })();
